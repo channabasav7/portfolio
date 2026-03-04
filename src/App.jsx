@@ -3,18 +3,21 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
-import Pricing from './components/Pricing';
 import Footer from './components/Footer';
+import Hyperspeed from './components/Hyperspeed';
+import { hyperspeedPresets } from './components/HyperSpeedPresets';
 
 export default function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Projects />
-      <Testimonials />
-      <Pricing />
-      <Footer />
+      <Hyperspeed effectOptions={hyperspeedPresets.one} />
+      <div style={{ position: 'relative', zIndex: 1 }}>
+        <Navbar />
+        <Hero />
+        <Projects />
+        <Testimonials />
+        <Footer />
+      </div>
     </>
   );
 }

@@ -15,7 +15,7 @@ const letterVariants = {
 };
 
 export default function Hero() {
-  const name = 'KAI VOID';
+  const name = 'CHANNABASAVA';
 
   return (
     <section className={styles.hero}>
@@ -50,7 +50,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
         >
-          Kai Void is a visionary digital artist and creative developer who
+          Channabasava is a visionary digital artist and creative developer who
           thrives at the intersection of code and design.
         </motion.p>
 

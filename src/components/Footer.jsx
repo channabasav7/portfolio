@@ -27,7 +27,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p className={styles.copy}>
-            &copy; {new Date().getFullYear()} Kai Void. All rights reserved.
+            &copy; {new Date().getFullYear()} Channabasava. All rights reserved.
           </p>
           <div className={styles.links}>
             <a href="#">Twitter</a>

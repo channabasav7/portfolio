@@ -11,7 +11,7 @@ export default function Navbar() {
     >
       <div className={`container ${styles.inner}`}>
         <a href="#" className={styles.logo}>
-          KV<span className={styles.dot}>.</span>
+          CS<span className={styles.dot}>.</span>
         </a>
 
         <div className={styles.right}>

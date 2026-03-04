@@ -1,0 +1,32 @@
+export const hyperspeedPresets = {
+  one: {
+    speedBoost: 1,
+    particleColor: '#c8ff00',
+    particleCount: 100,
+    lineColor: 'rgba(200, 255, 0, 0.3)',
+    speed: 0.5,
+    vignette: true,
+    blurTrail: true,
+    dashSize: 4,
+  },
+  two: {
+    speedBoost: 1.5,
+    particleColor: '#00d4ff',
+    particleCount: 150,
+    lineColor: 'rgba(0, 212, 255, 0.2)',
+    speed: 0.8,
+    vignette: true,
+    blurTrail: true,
+    dashSize: 6,
+  },
+  three: {
+    speedBoost: 2,
+    particleColor: '#ff00ff',
+    particleCount: 200,
+    lineColor: 'rgba(255, 0, 255, 0.2)',
+    speed: 1,
+    vignette: true,
+    blurTrail: true,
+    dashSize: 8,
+  },
+};
