@@ -71,7 +71,7 @@ export default function Hero() {
             </motion.a>
         </div>
         <div className={styles.spline}>
-          <spline-viewer url="https://prod.spline.design/QUIpNJ9gUlqahty0/scene.splinecode" style={{ backgroundColor: splineBg }}></spline-viewer>
+          <spline-viewer url="https://prod.spline.design/as80DPkgQq2ZDcMb/scene.splinecode" style={{ backgroundColor: splineBg }}></spline-viewer>
         </div>
       </div>
     </section>
