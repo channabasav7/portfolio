@@ -16,7 +16,7 @@ const letterVariants = {
 };
 
 export default function Hero() {
-  const name = 'CHANNABASAVA';
+  const name = 'CHANNABASAVA S. M';
   const { isDark } = useTheme();
 
   return (
@@ -29,7 +29,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           >
-            FULL-STACK DEVELOPER
+            ASPIRING WEB & MOBILE APP DEVELOPER
           </motion.p>
 
           <h1 className={styles.name}>
@@ -53,9 +53,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           >
-            Engineering scalable solutions and intelligent systems. Focused on
-            clean architecture, optimized data structures, and building secure,
-            high-performance web applications.
+            Student at MVJ College of Engineering. Building functional and
+            user-centric applications with a focus on Frontend and Android
+            development.
           </motion.p>
 
           <motion.div
@@ -70,7 +70,7 @@ export default function Hero() {
             <a href="#" className={styles.social} aria-label="Github">
               GH
             </a>
-            <a href="#" className={styles.social} aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/channabasava-s-m-66b140299/" className={styles.social} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               IN
             </a>
           </motion.div>

@@ -3,24 +3,28 @@ import styles from './Skills.module.css';
 
 const skillCategories = [
     {
-        title: 'Frontend',
+        title: 'Web Development',
         skills: [
-            { name: 'React', icon: '⚛' },
+            { name: 'HTML5/CSS3', icon: '🎨' },
             { name: 'JavaScript', icon: '🟨' },
+            { name: 'React', icon: '⚛' },
             { name: 'TypeScript', icon: '🔷' },
-            { name: 'HTML/CSS', icon: '🎨' },
-            { name: 'Framer Motion', icon: '✨' },
-            { name: 'Three.js', icon: '🌐' },
         ]
     },
     {
-        title: 'Backend & Tools',
+        title: 'Mobile Development',
         skills: [
-            { name: 'Node.js', icon: '🟩' },
-            { name: 'Express', icon: '🚂' },
-            { name: 'Git', icon: '📦' },
-            { name: 'Vite', icon: '⚡' },
-            { name: 'Figma', icon: '🎭' },
+            { name: 'Android (Java/XML)', icon: '🤖' },
+            { name: 'Kotlin', icon: '🟣' },
+            { name: 'Flutter & Dart', icon: '💙' },
+        ]
+    },
+    {
+        title: 'Tools & Languages',
+        skills: [
+            { name: 'Python', icon: '🐍' },
+            { name: 'Java', icon: '☕' },
+            { name: 'Git/GitHub', icon: '📦' },
         ]
     }
 ];
@@ -91,27 +95,26 @@ export default function Skills() {
                         <div className={styles.avatarBlock}>
                             <div className={styles.avatar}>CS</div>
                             <div>
-                                <h3 className={styles.name}>Channabasava</h3>
-                                <p className={styles.role}>Creative Developer</p>
+                                <h3 className={styles.name}>Channabasava S. M</h3>
+                                <p className={styles.role}>Aspiring Developer</p>
                             </div>
                         </div>
                         <p className={styles.bio}>
-                            I'm a creative developer passionate about building beautiful,
-                            functional digital products. With 3+ years of experience, I blend
-                            design craft with clean engineering to create memorable web experiences.
+                            Aspiring front-end and Android developer studying at MVJ College of Engineering.
+                            Passionate about building functional applications and exploring modern tech stacks like React and Flutter.
                         </p>
                         <div className={styles.statsRow}>
                             <div className={styles.stat}>
+                                <span className={styles.statNum}>2023</span>
+                                <span className={styles.statLabel}>Started Exp.</span>
+                            </div>
+                            <div className={styles.stat}>
+                                <span className={styles.statNum}>5+</span>
+                                <span className={styles.statLabel}>Core Skills</span>
+                            </div>
+                            <div className={styles.stat}>
                                 <span className={styles.statNum}>3+</span>
-                                <span className={styles.statLabel}>Years Exp.</span>
-                            </div>
-                            <div className={styles.stat}>
-                                <span className={styles.statNum}>20+</span>
-                                <span className={styles.statLabel}>Projects</span>
-                            </div>
-                            <div className={styles.stat}>
-                                <span className={styles.statNum}>15+</span>
-                                <span className={styles.statLabel}>Clients</span>
+                                <span className={styles.statLabel}>Live Projects</span>
                             </div>
                         </div>
                     </motion.div>

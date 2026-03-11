@@ -16,8 +16,8 @@ export default function About() {
                     <h2 className={styles.heading}>About me</h2>
                     <div className={styles.content}>
                         <p className={styles.text}>
-                            I'm a visionary digital artist and creative developer who thrives at the intersection of code and design.
-                            My passion lies in crafting immersive digital experiences and building robust, scalable solutions.
+                            I'm an aspiring front-end and Android developer with a strong focus on building functional and user-centric applications.
+                            Currently deepening expertise in Java, XML, and mobile app development, with active learning interests in modern frameworks like React, TypeScript, Flutter, and Dart.
                         </p>
                     </div>
                 </motion.div>
