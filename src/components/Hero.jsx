@@ -18,60 +18,62 @@ const letterVariants = {
 export default function Hero() {
   const name = 'CHANNABASAVA';
   const { isDark } = useTheme();
-  const splineBg = isDark ? '#111111' : '#f8f8f8';
 
   return (
     <section className={styles.hero}>
-      <div className={styles.inner}>
+      <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
           <motion.p
-              className={styles.tagline}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-            >
-              Digital Artist & Creative Developer
-            </motion.p>
+            className={styles.tagline}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+          >
+            FULL-STACK DEVELOPER
+          </motion.p>
 
-            <h1 className={styles.name}>
-              {name.split('').map((char, i) => (
-                <motion.span
-                  key={i}
-                  className={char === ' ' ? styles.space : undefined}
-                  custom={i}
-                  variants={letterVariants}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </h1>
+          <h1 className={styles.name}>
+            {name.split('').map((char, i) => (
+              <motion.span
+                key={i}
+                className={char === ' ' ? styles.space : undefined}
+                custom={i}
+                variants={letterVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                {char}
+              </motion.span>
+            ))}
+          </h1>
 
-            <motion.p
-              className={styles.bio}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-            >
-              Channabasava is a visionary digital artist and creative developer who
-              thrives at the intersection of code and design.
-            </motion.p>
+          <motion.p
+            className={styles.bio}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+          >
+            Engineering scalable solutions and intelligent systems. Focused on
+            clean architecture, optimized data structures, and building secure,
+            high-performance web applications.
+          </motion.p>
 
-            <motion.a
-              href="#contact"
-              className={styles.cta}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.2, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              CONTACT ME
-            </motion.a>
-        </div>
-        <div className={styles.spline}>
-          <spline-viewer url="https://prod.spline.design/as80DPkgQq2ZDcMb/scene.splinecode" style={{ backgroundColor: splineBg }}></spline-viewer>
+          <motion.div
+            className={styles.actions}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1.2, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+          >
+            <a href="#contact" className={styles.cta}>
+              Let's Talk →
+            </a>
+            <a href="#" className={styles.social} aria-label="Github">
+              GH
+            </a>
+            <a href="#" className={styles.social} aria-label="LinkedIn">
+              IN
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>

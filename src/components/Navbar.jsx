@@ -3,9 +3,11 @@ import ThemeToggle from './ThemeToggle';
 import styles from './Navbar.module.css';
 
 const navLinks = [
+  { label: 'Home', href: '#' },
+  { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
@@ -31,13 +33,6 @@ export default function Navbar() {
 
         <div className={styles.right}>
           <ThemeToggle />
-          <div className={styles.badge}>
-            <span className={styles.pulse} />
-            available for work
-          </div>
-          <a href="#contact" className={styles.cta}>
-            CONTACT ME
-          </a>
         </div>
       </div>
     </motion.nav>

@@ -1,19 +1,28 @@
 import { motion } from 'framer-motion';
 import styles from './Skills.module.css';
 
-const skills = [
-    { name: 'React', level: 90, icon: '⚛' },
-    { name: 'JavaScript', level: 88, icon: '🟨' },
-    { name: 'TypeScript', level: 78, icon: '🔷' },
-    { name: 'Node.js', level: 75, icon: '🟩' },
-    { name: 'UI/UX Design', level: 85, icon: '🎨' },
-    { name: 'Figma', level: 80, icon: '🎭' },
-    { name: 'CSS / Animations', level: 92, icon: '✨' },
-    { name: 'Three.js', level: 65, icon: '🌐' },
-];
-
-const tools = [
-    'VS Code', 'Git', 'Figma', 'Vite', 'Webpack', 'Docker', 'Vercel', 'Notion'
+const skillCategories = [
+    {
+        title: 'Frontend',
+        skills: [
+            { name: 'React', icon: '⚛' },
+            { name: 'JavaScript', icon: '🟨' },
+            { name: 'TypeScript', icon: '🔷' },
+            { name: 'HTML/CSS', icon: '🎨' },
+            { name: 'Framer Motion', icon: '✨' },
+            { name: 'Three.js', icon: '🌐' },
+        ]
+    },
+    {
+        title: 'Backend & Tools',
+        skills: [
+            { name: 'Node.js', icon: '🟩' },
+            { name: 'Express', icon: '🚂' },
+            { name: 'Git', icon: '📦' },
+            { name: 'Vite', icon: '⚡' },
+            { name: 'Figma', icon: '🎭' },
+        ]
+    }
 ];
 
 const containerVariants = {
@@ -46,33 +55,30 @@ export default function Skills() {
                 </motion.div>
 
                 <div className={styles.grid}>
-                    {/* Skills bars */}
-                    <motion.div
-                        className={styles.skillsList}
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: '-60px' }}
-                    >
-                        {skills.map((skill) => (
-                            <motion.div key={skill.name} className={styles.skillItem} variants={itemVariants}>
-                                <div className={styles.skillMeta}>
-                                    <span className={styles.skillIcon}>{skill.icon}</span>
-                                    <span className={styles.skillName}>{skill.name}</span>
-                                    <span className={styles.skillLevel}>{skill.level}%</span>
-                                </div>
-                                <div className={styles.barBg}>
-                                    <motion.div
-                                        className={styles.barFill}
-                                        initial={{ width: 0 }}
-                                        whileInView={{ width: `${skill.level}%` }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1, ease: [0.4, 0, 0.2, 1], delay: 0.2 }}
-                                    />
+                    {/* Categorized Skills */}
+                    <div className={styles.skillsCategories}>
+                        {skillCategories.map((category, i) => (
+                            <motion.div
+                                key={category.title}
+                                className={styles.categoryBlock}
+                                variants={itemVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: '-60px' }}
+                                custom={i}
+                            >
+                                <h3 className={styles.categoryTitle}>{category.title}</h3>
+                                <div className={styles.badgeWrap}>
+                                    {category.skills.map(skill => (
+                                        <div key={skill.name} className={styles.skillBadge}>
+                                            <span className={styles.badgeIcon}>{skill.icon}</span>
+                                            <span className={styles.badgeName}>{skill.name}</span>
+                                        </div>
+                                    ))}
                                 </div>
                             </motion.div>
                         ))}
-                    </motion.div>
+                    </div>
 
                     {/* About card */}
                     <motion.div
@@ -106,14 +112,6 @@ export default function Skills() {
                             <div className={styles.stat}>
                                 <span className={styles.statNum}>15+</span>
                                 <span className={styles.statLabel}>Clients</span>
-                            </div>
-                        </div>
-                        <div className={styles.toolsWrap}>
-                            <p className={styles.toolsLabel}>Tools I use</p>
-                            <div className={styles.tools}>
-                                {tools.map((t) => (
-                                    <span key={t} className={styles.tool}>{t}</span>
-                                ))}
                             </div>
                         </div>
                     </motion.div>

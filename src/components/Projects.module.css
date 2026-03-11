@@ -47,12 +47,15 @@
   overflow: hidden;
   border: 1px solid var(--border);
   cursor: pointer;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .card:hover {
-  border-color: rgba(200, 255, 0, 0.25);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .thumb {
@@ -111,9 +114,12 @@
 .tag {
   font-size: 0.72rem;
   color: var(--accent);
-  letter-spacing: 0.05em;
-  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-weight: 700;
   text-transform: uppercase;
+  background: rgba(200, 255, 0, 0.08);
+  padding: 4px 10px;
+  border-radius: 100px;
 }
 
 .year {

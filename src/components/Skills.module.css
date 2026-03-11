@@ -51,56 +51,61 @@
   align-items: start;
 }
 
-/* Skill bars */
-.skillsList {
+/* Category Blocks */
+.skillsCategories {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.skillItem {
+.categoryBlock {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
 }
 
-.skillMeta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.skillIcon {
-  font-size: 1rem;
-  width: 24px;
-  text-align: center;
-}
-
-.skillName {
-  flex: 1;
-  font-size: 0.9rem;
-  font-weight: 500;
+.categoryTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
 }
 
-.skillLevel {
-  font-size: 0.8rem;
-  color: var(--accent);
+.badgeWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skillBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 10px 20px;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.skillBadge:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(200, 255, 0, 0.05);
+}
+
+.badgeIcon {
+  font-size: 1.1rem;
+}
+
+.badgeName {
+  font-size: 0.9rem;
   font-weight: 600;
-  font-variant-numeric: tabular-nums;
-}
-
-.barBg {
-  height: 3px;
-  background: var(--border);
-  border-radius: 100px;
-  overflow: hidden;
-}
-
-.barFill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--accent), #7fff00);
-  border-radius: 100px;
+  color: var(--text-secondary);
 }
 
 /* About card */
@@ -182,40 +187,7 @@
   letter-spacing: 0.1em;
 }
 
-.toolsWrap {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
 
-.toolsLabel {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tool {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 4px 12px;
-  font-size: 0.78rem;
-  color: var(--text-secondary);
-  font-weight: 500;
-  transition: border-color var(--transition), color var(--transition);
-}
-
-.tool:hover {
-  border-color: var(--accent);
-  color: var(--text-primary);
-}
 
 @media (max-width: 900px) {
   .grid {

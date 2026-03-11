@@ -23,15 +23,10 @@
 
 .inner {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
   width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  flex-wrap: nowrap;
   position: relative;
 }
 
@@ -44,7 +39,6 @@
   flex: 1;
   min-width: 0;
   text-align: center;
-  padding: 0 60px;
   height: 100vh;
 }
 
@@ -61,10 +55,8 @@
   letter-spacing: -0.04em;
   line-height: 0.95;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .name span {
@@ -82,30 +74,47 @@
   line-height: 1.7;
 }
 
-.cta {
-  display: inline-block;
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
   margin-top: 16px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border: 1px solid var(--border);
-  color: var(--text-primary);
-  padding: 14px 36px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--bg-primary);
+  background: var(--text-primary);
+  padding: 14px 32px;
   border-radius: 100px;
-  transition: background var(--transition), border-color var(--transition);
+  transition: transform var(--transition), background var(--transition);
 }
 
 .cta:hover {
-  border-color: var(--accent);
-  background: rgba(200, 255, 0, 0.05);
+  transform: translateY(-2px);
+  background: var(--accent);
 }
 
-.spline {
-  flex: 1;
-  height: 100vh;
-  overflow: hidden;
-  background: var(--bg-secondary);
+.social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  transition: all var(--transition);
+}
+
+.social:hover {
+  border-color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 768px) {
@@ -116,15 +125,13 @@
     max-width: 100%;
   }
 
-  .spline {
-    width: 100%;
-    height: 400px;
-    flex: none;
-  }
-
   .content {
     align-items: center;
     text-align: center;
+  }
+
+  .actions {
+    justify-content: center;
   }
 
   .name {
@@ -144,9 +151,5 @@
   .bio {
     max-width: 100%;
     font-size: 0.95rem;
-  }
-
-  .spline {
-    height: 250px;
   }
 }
