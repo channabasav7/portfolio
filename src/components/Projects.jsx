@@ -1,30 +1,67 @@
 import { motion } from 'framer-motion';
+import { Github, ExternalLink } from 'lucide-react';
 import styles from './Projects.module.css';
 
 const projects = [
   {
-    name: 'rxassist',
-    category: 'Python / MedicalTech',
-    desc: 'A Python-based application for medical diagnosis and prescriptions with a dedicated frontend interface.',
-    color: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)',
-    accentColor: '#4fabff',
-    year: '2024',
+    name: 'Food App',
+    category: 'Flutter / Dart',
+    desc: 'A Flutter-based food delivery application with a clean UI and smooth user experience.',
+    color: 'linear-gradient(135deg, #ff6b35 0%, #f7931e 100%)',
+    accentColor: '#ffb347',
+    year: '2026',
+    github: 'https://github.com/channabasav7/Food',
+    language: 'Dart',
   },
   {
-    name: 'HTML Portfolio',
-    category: 'Web Development',
-    desc: 'Foundational web project showcasing early skills in frontend development, structure, and semantic HTML.',
-    color: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
-    accentColor: '#38ef7d',
-    year: '2024',
+    name: 'Hand Gesture',
+    category: 'Python / Computer Vision',
+    desc: 'Hand gesture recognition system using Python and computer vision techniques.',
+    color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    accentColor: '#a78bfa',
+    year: '2026',
+    github: 'https://github.com/channabasav7/Hand-gesture',
+    language: 'Python',
   },
   {
-    name: 'Resume Capstone',
-    category: 'Professional Tool',
-    desc: 'A structured project demonstrating professional credential organization into a clean web format.',
-    color: 'linear-gradient(135deg, #eb3349 0%, #f45c43 100%)',
-    accentColor: '#ff7b7b',
-    year: '2024',
+    name: 'Nike Store',
+    category: 'HTML / CSS / JavaScript',
+    desc: 'A modern Nike store frontend with responsive design and interactive UI elements.',
+    color: 'linear-gradient(135deg, #1a1a1a 0%, #434343 100%)',
+    accentColor: '#ff4545',
+    year: '2026',
+    github: 'https://github.com/channabasav7/Nike_Store',
+    language: 'HTML',
+  },
+  {
+    name: 'Sunny Days Ahead',
+    category: 'TypeScript / Web App',
+    desc: 'A weather application built with TypeScript for forecasting and weather data visualization.',
+    color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+    accentColor: '#fbbf24',
+    year: '2026',
+    github: 'https://github.com/channabasav7/sunny-days-ahead',
+    language: 'TypeScript',
+  },
+  {
+    name: 'System Controller',
+    category: 'Python / Automation',
+    desc: 'Python-based system control and automation tool for desktop operations.',
+    color: 'linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)',
+    accentColor: '#60a5fa',
+    year: '2026',
+    github: 'https://github.com/channabasav7/system-controller-',
+    language: 'Python',
+  },
+  {
+    name: 'AI Voice Assistant',
+    category: 'AI / Voice Recognition',
+    desc: 'An AI-powered voice assistant application for hands-free interaction and automation.',
+    color: 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)',
+    accentColor: '#22d3ee',
+    year: '2026',
+    github: 'https://github.com/channabasav7/AI-voice-Assistant',
+    language: 'AI',
   },
 ];
 
@@ -87,8 +124,9 @@ export default function Projects() {
                 </div>
                 <h3 className={styles.name}>{project.name}</h3>
                 <p className={styles.desc}>{project.desc}</p>
-                <a href="#" className={styles.link}>
-                  View project →
+                <a href={project.github} className={styles.link} target="_blank" rel="noopener noreferrer">
+                  <Github size={16} />
+                  View on GitHub
                 </a>
               </div>
             </motion.div>
@@ -102,7 +140,7 @@ export default function Projects() {
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          <a href="#" className={styles.viewAllLink}>
+          <a href="https://github.com/channabasav7" className={styles.viewAllLink} target="_blank" rel="noopener noreferrer">
             VIEW ALL PROJECTS
             <svg
               width="16"

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Github, Linkedin } from 'lucide-react';
 import styles from './Hero.module.css';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -16,7 +17,7 @@ const letterVariants = {
 };
 
 export default function Hero() {
-  const name = 'CHANNABASAVA S. M';
+  const name = 'CHANNABASAVA';
   const { isDark } = useTheme();
 
   return (
@@ -29,7 +30,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           >
-            ASPIRING WEB & MOBILE APP DEVELOPER
+            ASPIRING WEB & FLUTTER  DEVELOPER
           </motion.p>
 
           <h1 className={styles.name}>
@@ -53,8 +54,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           >
-            Student at MVJ College of Engineering. Building functional and
-            user-centric applications with a focus on Frontend and Android
+            Building functional and
+        user-centric applications with a focus on Frontend and flutter
             development.
           </motion.p>
 
@@ -67,11 +68,11 @@ export default function Hero() {
             <a href="#contact" className={styles.cta}>
               Let's Talk →
             </a>
-            <a href="#" className={styles.social} aria-label="Github">
-              GH
+            <a href="https://github.com/channabasav7" className={styles.social} aria-label="Github">
+              <Github size={20} />
             </a>
             <a href="https://www.linkedin.com/in/channabasava-s-m-66b140299/" className={styles.social} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              IN
+              <Linkedin size={20} />
             </a>
           </motion.div>
         </div>
