@@ -97,6 +97,26 @@
     color: var(--bg-primary);
 }
 
+.submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.successMsg {
+    color: #22c55e;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.errorMsg {
+    color: #ef4444;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
