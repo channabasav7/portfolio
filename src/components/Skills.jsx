@@ -1,30 +1,35 @@
 import { motion } from 'framer-motion';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, FaGitAlt, FaGithub, FaAndroid } from 'react-icons/fa';
+import { SiTypescript, SiKotlin, SiFlutter, SiDart } from 'react-icons/si';
 import styles from './Skills.module.css';
 
 const skillCategories = [
     {
         title: 'Web Development',
         skills: [
-            { name: 'HTML5/CSS3', icon: '🎨' },
-            { name: 'JavaScript', icon: '🟨' },
-            { name: 'React', icon: '⚛' },
-            { name: 'TypeScript', icon: '🔷' },
+            { name: 'HTML5', icon: <FaHtml5 /> },
+            { name: 'CSS3', icon: <FaCss3Alt /> },
+            { name: 'JavaScript', icon: <FaJs /> },
+            { name: 'React', icon: <FaReact /> },
+            { name: 'TypeScript', icon: <SiTypescript /> },
         ]
     },
     {
         title: 'Mobile Development',
         skills: [
-            { name: 'Android (Java/XML)', icon: '🤖' },
-            { name: 'Kotlin', icon: '🟣' },
-            { name: 'Flutter & Dart', icon: '💙' },
+            { name: 'Android', icon: <FaAndroid /> },
+            { name: 'Java', icon: <FaJava /> },
+            { name: 'Kotlin', icon: <SiKotlin /> },
+            { name: 'Flutter', icon: <SiFlutter /> },
+            { name: 'Dart', icon: <SiDart /> },
         ]
     },
     {
         title: 'Tools & Languages',
         skills: [
-            { name: 'Python', icon: '🐍' },
-            { name: 'Java', icon: '☕' },
-            { name: 'Git/GitHub', icon: '📦' },
+            { name: 'Python', icon: <FaPython /> },
+            { name: 'Git', icon: <FaGitAlt /> },
+            { name: 'GitHub', icon: <FaGithub /> },
         ]
     }
 ];
