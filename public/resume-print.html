@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Channabasava S M - Resume</title>
+  <style>
+    :root {
+      --ink: #14181f;
+      --muted: #4a5568;
+      --line: #d7dde7;
+      --accent: #0f6abf;
+      --surface: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--ink);
+      background: #f4f7fb;
+      line-height: 1.35;
+      font-size: 11.2pt;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 12mm auto;
+      background: var(--surface);
+      padding: 14mm 14mm 12mm;
+      box-shadow: 0 6px 24px rgba(17, 24, 39, 0.12);
+    }
+
+    .header {
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22pt;
+      letter-spacing: 0.4px;
+      line-height: 1.1;
+    }
+
+    .role {
+      margin: 4px 0 8px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 11pt;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .contact {
+      margin: 0;
+      color: var(--muted);
+      font-size: 10pt;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    section {
+      margin-top: 10px;
+    }
+
+    h2 {
+      margin: 0 0 6px;
+      font-size: 10.2pt;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 3px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 4px 0 0 16px;
+      padding: 0;
+    }
+
+    li {
+      margin: 2px 0;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 16px;
+      font-size: 10.5pt;
+    }
+
+    .project {
+      margin-bottom: 7px;
+    }
+
+    .project-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 10.7pt;
+    }
+
+    .project-meta {
+      color: var(--muted);
+      font-size: 10pt;
+      margin-top: 1px;
+    }
+
+    .project a {
+      color: #0b5cab;
+      text-decoration: none;
+      font-size: 9.8pt;
+    }
+
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 10.7pt;
+      font-weight: 700;
+    }
+
+    .subtle {
+      color: var(--muted);
+      font-size: 10pt;
+      margin-top: 2px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        margin: 0;
+        width: auto;
+        min-height: auto;
+        box-shadow: none;
+        padding: 10mm 11mm 8mm;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <h1>CHANNABASAVA S M</h1>
+      <p class="role">Flutter and Android Developer</p>
+      <p class="contact">
+        channabasav40@gmail.com |
+        <a href="https://www.linkedin.com/in/channabasava-s-m-66b140299/">linkedin.com/in/channabasava-s-m-66b140299</a> |
+        <a href="https://github.com/channabasav7">github.com/channabasav7</a>
+      </p>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Aspiring Flutter and Android Developer with practical project experience in Flutter, Dart, Java, and Kotlin.
+        Strong focus on building user-centric interfaces, writing maintainable code, and delivering reliable application flows.
+      </p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><strong>Mobile:</strong> Flutter, Dart, Android, Java</div>
+        <div><strong>Frontend:</strong> HTML5, CSS3, JavaScript</div>
+        <div><strong>Programming:</strong> Python, Java</div>
+        <div><strong>Tools:</strong> Git, GitHub</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <span>Food App (Flutter / Dart)</span>
+          <span>2026</span>
+        </div>
+        <p class="project-meta">Cross-platform food delivery app with clean UI and smooth navigation flow.</p>
+        <ul>
+          <li>Built responsive mobile screens with reusable widget-based structure.</li>
+          <li>Focused on intuitive ordering journey and maintainable UI patterns.</li>
+        </ul>
+        <a href="https://github.com/channabasav7/Food">github.com/channabasav7/Food</a>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <span>AI Voice Assistant</span>
+          <span>2026</span>
+        </div>
+        <p class="project-meta">Voice-enabled assistant for command-driven interaction and automation.</p>
+        <ul>
+          <li>Implemented core voice command processing and action flow.</li>
+          <li>Improved interaction accessibility through hands-free control design.</li>
+        </ul>
+        <a href="https://github.com/channabasav7/AI-voice-Assistant">github.com/channabasav7/AI-voice-Assistant</a>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <span>Nike Store Frontend</span>
+          <span>2026</span>
+        </div>
+        <p class="project-meta">Responsive ecommerce-style frontend built with web technologies.</p>
+        <ul>
+          <li>Designed interactive layouts with clear visual hierarchy and responsiveness.</li>
+          <li>Implemented user-friendly UI behaviors for smoother product browsing.</li>
+        </ul>
+        <a href="https://github.com/channabasav7/Nike_Store">github.com/channabasav7/Nike_Store</a>
+      </article>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu-row">
+        <span>B.E., MVJ College of Engineering</span>
+        <span>[Add Graduation Year]</span>
+      </div>
+      <p class="subtle">Open to internships and entry-level Flutter/Android developer opportunities.</p>
+    </section>
+  </main>
+</body>
+</html>
