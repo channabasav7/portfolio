@@ -34,6 +34,12 @@ export default function Resume() {
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.75, ease: [0.4, 0, 0.2, 1] }}
         >
+          <div className={styles.metaStrip}>
+            <span className={styles.metaChip}>Flutter / Android</span>
+            <span className={styles.metaChip}>Expected Graduation: 2027</span>
+            <span className={styles.metaChip}>Open to Internship</span>
+          </div>
+
           <div className={styles.topRow}>
             <div>
               <h3 className={styles.name}>Channabasava S M</h3>
@@ -64,14 +70,14 @@ export default function Resume() {
               View Full Resume
             </a>
             <a
-              href="/resume-print.html"
+              href="/Channabasava_SM_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.secondaryBtn}
-              download="Channabasava_SM_Resume.html"
+              download="Channabasava_SM_Resume.pdf"
             >
               <Download size={16} />
-              Download
+              Download PDF
             </a>
           </div>
         </motion.div>

@@ -38,7 +38,7 @@ Aspiring Flutter and Android Developer with practical experience building mobile
 
 ## Education
 Bachelor of Engineering (B.E.), MVJ College of Engineering  
-Expected Graduation: [Add Year]
+Expected Graduation: 2027
 
 ## Internship Objective
 Seeking Flutter/Android internship or entry-level mobile developer role to build production-ready apps, improve code quality practices, and contribute to impactful user experiences.
