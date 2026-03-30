@@ -18,7 +18,6 @@ const letterVariants = {
 
 export default function Hero() {
   const name = 'CHANNABASAVA';
-  const { isDark } = useTheme();
 
   return (
     <section className={styles.hero}>

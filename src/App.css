@@ -1,6 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@font-face {
+  font-family: 'Airstrike';
+  src: url('/fonts/airstrike.woff2') format('woff2'),
+    url('/fonts/airstrike.woff') format('woff'),
+    url('/fonts/airstrike.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
+  --font-body: 'Manrope', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-display: 'Airstrike', 'Manrope', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, 'Courier New', monospace;
   --bg-primary: #0a0a0a;
   --bg-secondary: #111111;
   --bg-card: #161616;
@@ -28,6 +41,32 @@
   --border: #e0e0e0;
 }
 
+/* Vermillion Mode */
+[data-theme='vermilion'] {
+  --bg-primary: #130a09;
+  --bg-secondary: #1d1110;
+  --bg-card: #261615;
+  --bg-card-hover: #311d1b;
+  --text-primary: #fff3ee;
+  --text-secondary: #f0b8a8;
+  --text-muted: #a9786c;
+  --accent: #ff6b3d;
+  --border: #472724;
+}
+
+/* Neon Mode */
+[data-theme='neon'] {
+  --bg-primary: #040b12;
+  --bg-secondary: #091520;
+  --bg-card: #0d1e2b;
+  --bg-card-hover: #12283a;
+  --text-primary: #eaffff;
+  --text-secondary: #9de6e3;
+  --text-muted: #63b8b4;
+  --accent: #00ffb8;
+  --border: #1b3b52;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -40,13 +79,38 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-body);
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
+  letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+p,
+li,
+a,
+button,
+input,
+textarea {
+  font-family: var(--font-body);
+}
+
+small,
+code {
+  font-family: var(--font-mono);
 }
 
 a {

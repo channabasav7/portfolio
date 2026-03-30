@@ -2,6 +2,8 @@ import React, { createContext, useContext, useState, useCallback, useEffect } fr
 
 export const ThemeContext = createContext();
 
+const THEMES = ['dark', 'light', 'vermilion', 'neon'];
+
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {
@@ -11,34 +13,44 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(() => {
+  const [theme, setTheme] = useState(() => {
     // Check localStorage first
     const saved = localStorage.getItem('theme-preference');
-    if (saved) {
-      return saved === 'dark';
+    if (saved && THEMES.includes(saved)) {
+      return saved;
     }
+
     // Check system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   });
 
   // Update DOM and localStorage when theme changes
   useEffect(() => {
     const root = document.documentElement;
-    if (isDark) {
-      root.setAttribute('data-theme', 'dark');
-    } else {
-      root.setAttribute('data-theme', 'light');
-    }
-    localStorage.setItem('theme-preference', isDark ? 'dark' : 'light');
-  }, [isDark]);
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme-preference', theme);
+  }, [theme]);
 
   const toggleTheme = useCallback(() => {
-    setIsDark((prev) => !prev);
+    setTheme((prev) => {
+      const currentIndex = THEMES.indexOf(prev);
+      const nextIndex = (currentIndex + 1) % THEMES.length;
+      return THEMES[nextIndex];
+    });
+  }, []);
+
+  const setThemeByName = useCallback((nextTheme) => {
+    if (THEMES.includes(nextTheme)) {
+      setTheme(nextTheme);
+    }
   }, []);
 
   const value = {
-    isDark,
+    theme,
+    isDark: theme !== 'light',
     toggleTheme,
+    setTheme: setThemeByName,
+    themes: THEMES,
   };
 
   return (

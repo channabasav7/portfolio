@@ -1,15 +1,23 @@
 import { useEffect, useRef, useCallback } from 'react';
+import { useTheme } from '../hooks/useTheme';
 
 const PARTICLE_COUNT = 120;
 const PARTICLE_SPEED = 0.4;
 const SPAWN_RATE = 3; // particles spawned per mouse move event
 
+const THEME_PARTICLE_STYLE = {
+    dark: { hueMin: 210, hueMax: 250, saturation: 80, lightness: 65 },
+    light: { hueMin: 190, hueMax: 220, saturation: 72, lightness: 52 },
+    vermilion: { hueMin: 8, hueMax: 28, saturation: 92, lightness: 58 },
+    neon: { hueMin: 152, hueMax: 178, saturation: 96, lightness: 56 },
+};
+
 class Particle {
-    constructor(x, y, canvasW, canvasH) {
-        this.reset(x, y, canvasW, canvasH);
+    constructor(x, y, canvasW, canvasH, style) {
+        this.reset(x, y, canvasW, canvasH, style);
     }
 
-    reset(x, y, canvasW, canvasH) {
+    reset(x, y, canvasW, canvasH, style) {
         this.x = x + (Math.random() - 0.5) * 30;
         this.y = y + (Math.random() - 0.5) * 30;
         this.size = Math.random() * 4 + 1.5;
@@ -17,9 +25,8 @@ class Particle {
         this.speedY = (Math.random() - 0.5) * PARTICLE_SPEED * 2 - PARTICLE_SPEED * 0.5;
         this.life = 1; // 1 = full alpha
         this.decay = Math.random() * 0.012 + 0.006;
-        // Color: blue-indigo palette like the screenshot
-        const hue = Math.floor(Math.random() * 40) + 210; // 210–250 range (blue-violet)
-        this.color = `hsl(${hue}, 80%, 65%)`;
+        const hue = Math.floor(Math.random() * (style.hueMax - style.hueMin + 1)) + style.hueMin;
+        this.color = `hsl(${hue}, ${style.saturation}%, ${style.lightness}%)`;
         this.rotation = Math.random() * Math.PI * 2;
         this.rotationSpeed = (Math.random() - 0.5) * 0.08;
         this.isRect = Math.random() > 0.5; // mix of dots and small rects
@@ -62,11 +69,17 @@ class Particle {
 }
 
 export default function ParticleCanvas() {
+    const { theme } = useTheme();
     const canvasRef = useRef(null);
     const particlesRef = useRef([]);
     const animFrameRef = useRef(null);
     const mouseRef = useRef({ x: -1000, y: -1000 });
     const sizeRef = useRef({ w: 0, h: 0 });
+    const themeStyleRef = useRef(THEME_PARTICLE_STYLE.dark);
+
+    useEffect(() => {
+        themeStyleRef.current = THEME_PARTICLE_STYLE[theme] || THEME_PARTICLE_STYLE.dark;
+    }, [theme]);
 
     const resize = useCallback(() => {
         const canvas = canvasRef.current;
@@ -78,18 +91,19 @@ export default function ParticleCanvas() {
 
     const spawnParticles = useCallback((x, y) => {
         const { w, h } = sizeRef.current;
+        const style = themeStyleRef.current;
         for (let i = 0; i < SPAWN_RATE; i++) {
             if (particlesRef.current.length < PARTICLE_COUNT) {
-                particlesRef.current.push(new Particle(x, y, w, h));
+                particlesRef.current.push(new Particle(x, y, w, h, style));
             } else {
                 // Recycle the oldest dead particle or oldest alive one
                 const dead = particlesRef.current.findIndex((p) => p.isDead());
                 if (dead !== -1) {
-                    particlesRef.current[dead].reset(x, y, w, h);
+                    particlesRef.current[dead].reset(x, y, w, h, style);
                 } else {
                     // replace the oldest
                     particlesRef.current.shift();
-                    particlesRef.current.push(new Particle(x, y, w, h));
+                    particlesRef.current.push(new Particle(x, y, w, h, style));
                 }
             }
         }
