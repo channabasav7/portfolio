@@ -100,7 +100,7 @@ export default function Contact() {
                             <input 
                                 type="text" 
                                 name="name"
-                                placeholder="John Doe" 
+                                placeholder="Name" 
                                 className={styles.input} 
                                 value={formData.name}
                                 onChange={handleChange}
