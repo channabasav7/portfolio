@@ -19,7 +19,6 @@ const skillCategories = [
         skills: [
             { name: 'Android', icon: <FaAndroid /> },
             { name: 'Java', icon: <FaJava /> },
-            { name: 'Kotlin', icon: <SiKotlin /> },
             { name: 'Flutter', icon: <SiFlutter /> },
             { name: 'Dart', icon: <SiDart /> },
         ]

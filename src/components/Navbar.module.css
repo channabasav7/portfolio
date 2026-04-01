@@ -84,6 +84,80 @@
   gap: 20px;
 }
 
+.menuButton {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.menuButton:hover {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+}
+
+.menuLine {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 99px;
+  transform-origin: center;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.menuButtonOpen .menuLine:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menuButtonOpen .menuLine:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButtonOpen .menuLine:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobileMenu {
+  display: none;
+  width: min(92vw, 460px);
+  margin: 10px auto 0;
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg-card) 88%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+}
+
+.mobileLink {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color var(--transition), background var(--transition);
+}
+
+.mobileLink:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='light'] .mobileLink:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
 .badge {
   display: flex;
   align-items: center;
@@ -149,6 +223,16 @@
   .cta {
     font-size: 0.7rem;
     padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: inline-flex;
+  }
+
+  .mobileMenu {
+    display: block;
   }
 }
 

@@ -3,7 +3,7 @@ import { FileText, Download } from 'lucide-react';
 import styles from './Resume.module.css';
 
 const resumeHighlights = [
-  'Flutter, Dart, Android (Java/Kotlin), XML',
+  'Flutter, Dart, and Android development with practical project experience',
   'React, JavaScript, TypeScript, responsive UI design',
   'Python automation and practical project delivery',
   'Git/GitHub workflow and clean component architecture',
@@ -35,15 +35,15 @@ export default function Resume() {
           transition={{ duration: 0.75, ease: [0.4, 0, 0.2, 1] }}
         >
           <div className={styles.metaStrip}>
-            <span className={styles.metaChip}>Flutter / Android</span>
+            <span className={styles.metaChip}>Flutter </span>
             <span className={styles.metaChip}>Expected Graduation: 2027</span>
             <span className={styles.metaChip}>Open to Internship</span>
           </div>
 
           <div className={styles.topRow}>
             <div>
-              <h3 className={styles.name}>Channabasava S M</h3>
-              <p className={styles.role}>Aspiring Flutter and Android Developer</p>
+              <h3 className={styles.name}>Channabasava</h3>
+              <p className={styles.role}>Aspiring Flutter and Frontend Developer</p>
             </div>
             <FileText size={24} className={styles.icon} />
           </div>

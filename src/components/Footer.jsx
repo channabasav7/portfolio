@@ -2,8 +2,6 @@ import { motion } from 'framer-motion';
 import styles from './Footer.module.css';
 
 const socials = [
-  { name: 'Twitter', href: '#', icon: '𝕏' },
-  { name: 'Dribbble', href: '#', icon: '🏀' },
   { name: 'LinkedIn', href: 'https://www.linkedin.com/in/channabasava-s-m-66b140299/', icon: 'in' },
   { name: 'GitHub', href: '#', icon: '⌨' },
 ];
