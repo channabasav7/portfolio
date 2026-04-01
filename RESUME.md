@@ -57,4 +57,4 @@ Bachelor of Engineering (B.E.), MVJ College of Engineering
 
 ## Additional Information
 - Open to internships and entry-level roles in Frontend, Flutter, and Software Development.
-- Portfolio: [Add your deployed portfolio URL]
+- Portfolio: https://channabasava.vercel.app/

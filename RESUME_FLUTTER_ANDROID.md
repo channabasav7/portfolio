@@ -45,4 +45,4 @@ Seeking Flutter/Android internship or entry-level mobile developer role to build
 
 ## Additional Information
 - Open to internships and junior roles in Flutter, Android, and software development.
-- Portfolio: [Add deployed portfolio URL]
+- Portfolio: https://channabasava.vercel.app/
