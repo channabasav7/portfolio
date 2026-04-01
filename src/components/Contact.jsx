@@ -64,46 +64,73 @@ export default function Contact() {
                 >
                     <span className={styles.label}>// Get in touch</span>
                     <h2 className={styles.heading}>Let's work together</h2>
+                    <p className={styles.headerSubtext}>Open to internship and freelance frontend projects.</p>
                 </motion.div>
 
                 <div className={styles.grid}>
-                    <div className={styles.info}>
+                    <aside className={styles.infoCard}>
+                        <h3 className={styles.infoTitle}>Start a conversation</h3>
                         <p className={styles.desc}>
                             Have a project in mind? I'd love to hear about it. Drop me a message
                             and I'll get back to you as soon as possible.
                         </p>
                         <div className={styles.contactDetails}>
-                            <a href="mailto:channabasav40@gmail.com" className={styles.detailLink}>channabasav40@gmail.com</a>
+                            <a href="mailto:channabasav40@gmail.com" className={styles.detailLink}>
+                                <span className={styles.detailLabel}>Email</span>
+                                <span>channabasav40@gmail.com</span>
+                            </a>
+                            <a href="tel:+919483992653" className={styles.detailLink}>
+                                <span className={styles.detailLabel}>Phone</span>
+                                <span>+91 9483992653</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/channabasava-s-m-66b140299/" target="_blank" rel="noreferrer" className={styles.detailLink}>
+                                <span className={styles.detailLabel}>LinkedIn</span>
+                                <span>channabasava-s-m-66b140299</span>
+                            </a>
+                            <a href="https://github.com/channabasav7" target="_blank" rel="noreferrer" className={styles.detailLink}>
+                                <span className={styles.detailLabel}>GitHub</span>
+                                <span>github.com/channabasav7</span>
+                            </a>
                         </div>
-                    </div>
+                    </aside>
                     <form className={styles.form} onSubmit={handleSubmit}>
-                        <input 
-                            type="text" 
-                            name="name"
-                            placeholder="Name" 
-                            className={styles.input} 
-                            value={formData.name}
-                            onChange={handleChange}
-                            required 
-                        />
-                        <input 
-                            type="email" 
-                            name="email"
-                            placeholder="Email" 
-                            className={styles.input} 
-                            value={formData.email}
-                            onChange={handleChange}
-                            required 
-                        />
-                        <textarea 
-                            name="message"
-                            placeholder="Message" 
-                            className={styles.textarea} 
-                            rows={5}
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                        ></textarea>
+                        <h3 className={styles.formTitle}>Send a message</h3>
+                        <label className={styles.field}>
+                            <span className={styles.fieldLabel}>Your Name</span>
+                            <input 
+                                type="text" 
+                                name="name"
+                                placeholder="John Doe" 
+                                className={styles.input} 
+                                value={formData.name}
+                                onChange={handleChange}
+                                required 
+                            />
+                        </label>
+                        <label className={styles.field}>
+                            <span className={styles.fieldLabel}>Email Address</span>
+                            <input 
+                                type="email" 
+                                name="email"
+                                placeholder="you@example.com" 
+                                className={styles.input} 
+                                value={formData.email}
+                                onChange={handleChange}
+                                required 
+                            />
+                        </label>
+                        <label className={styles.field}>
+                            <span className={styles.fieldLabel}>Project Details</span>
+                            <textarea 
+                                name="message"
+                                placeholder="Tell me about your idea, timeline, and requirements..." 
+                                className={styles.textarea} 
+                                rows={5}
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                            ></textarea>
+                        </label>
                         <button 
                             type="submit" 
                             className={styles.submitBtn}

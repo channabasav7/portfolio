@@ -40,7 +40,7 @@ export default function Footer() {
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
             >
-              Hire on Contra
+              Get in touch
             </motion.a>
           </div>
         </motion.div>
