@@ -39,8 +39,19 @@
 
     .header {
       border-bottom: 2px solid var(--line);
-      padding-bottom: 8px;
+      padding-bottom: 10px;
       margin-bottom: 10px;
+    }
+
+    .headerTop {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .headerTitle {
+      min-width: 0;
     }
 
     h1 {
@@ -63,7 +74,18 @@
     .contact {
       margin: 0;
       color: var(--muted);
-      font-size: 10pt;
+      font-size: 9.8pt;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 8px;
+    }
+
+    .separator {
+      color: #8a96a8;
+    }
+
+    .contactItem {
+      white-space: nowrap;
     }
 
     .contact a {
@@ -171,12 +193,20 @@
 <body>
   <main class="page">
     <header class="header">
-      <h1>CHANNABASAVA</h1>
-      <p class="role">Flutter and Frontend Developer</p>
+      <div class="headerTop">
+        <div class="headerTitle">
+          <h1>CHANNABASAVA</h1>
+          <p class="role">Flutter and Frontend Developer</p>
+        </div>
+      </div>
       <p class="contact">
-        channabasav40@gmail.com |
-        <a href="https://www.linkedin.com/in/channabasava-s-m-66b140299/">linkedin.com/in/channabasava-s-m-66b140299</a> |
-        <a href="https://github.com/channabasav7">github.com/channabasav7</a>
+        <span class="contactItem">channabasav40@gmail.com</span>
+        <span class="separator">|</span>
+        <span class="contactItem">+91 9483992653</span>
+        <span class="separator">|</span>
+        <a class="contactItem" href="https://www.linkedin.com/in/channabasava-s-m-66b140299/">linkedin.com/in/channabasava-s-m-66b140299</a>
+        <span class="separator">|</span>
+        <a class="contactItem" href="https://github.com/channabasav7">github.com/channabasav7</a>
       </p>
     </header>
 

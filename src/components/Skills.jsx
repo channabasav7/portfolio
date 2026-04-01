@@ -9,8 +9,8 @@ const skillCategories = [
         skills: [
             { name: 'HTML5', icon: <FaHtml5 /> },
             { name: 'CSS3', icon: <FaCss3Alt /> },
+             { name: 'React', icon: <FaReact /> },
             { name: 'JavaScript', icon: <FaJs /> },
-            { name: 'React', icon: <FaReact /> },
             { name: 'TypeScript', icon: <SiTypescript /> },
         ]
     },
