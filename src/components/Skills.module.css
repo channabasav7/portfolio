@@ -129,7 +129,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), #7fff00);
+    background: linear-gradient(135deg, var(--accent), #2a8de0);
   color: var(--bg-primary);
   font-weight: 900;
   font-size: 1rem;

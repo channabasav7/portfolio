@@ -8,8 +8,6 @@ const SPAWN_RATE = 3; // particles spawned per mouse move event
 const THEME_PARTICLE_STYLE = {
     dark: { hueMin: 210, hueMax: 250, saturation: 80, lightness: 65 },
     light: { hueMin: 190, hueMax: 220, saturation: 72, lightness: 52 },
-    vermilion: { hueMin: 8, hueMax: 28, saturation: 92, lightness: 58 },
-    neon: { hueMin: 152, hueMax: 178, saturation: 96, lightness: 56 },
 };
 
 class Particle {

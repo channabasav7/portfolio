@@ -39,13 +39,3 @@
 .light {
   color: var(--text-primary);
 }
-
-.vermilion {
-  border-color: rgba(255, 107, 61, 0.45);
-  box-shadow: 0 0 0 1px rgba(255, 107, 61, 0.15) inset;
-}
-
-.neon {
-  border-color: rgba(0, 255, 184, 0.5);
-  box-shadow: 0 0 0 1px rgba(0, 255, 184, 0.2) inset, 0 0 18px rgba(0, 255, 184, 0.18);
-}

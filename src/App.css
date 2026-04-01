@@ -21,7 +21,7 @@
   --text-primary: #ffffff;
   --text-secondary: #888888;
   --text-muted: #555555;
-  --accent: #c8ff00;
+  --accent: #0f6abf;
   --border: #222222;
   --radius: 12px;
   --radius-lg: 20px;
@@ -37,34 +37,8 @@
   --text-primary: #0a0a0a;
   --text-secondary: #666666;
   --text-muted: #999999;
-  --accent: #c8ff00;
+  --accent: #0f6abf;
   --border: #e0e0e0;
-}
-
-/* Vermillion Mode */
-[data-theme='vermilion'] {
-  --bg-primary: #130a09;
-  --bg-secondary: #1d1110;
-  --bg-card: #261615;
-  --bg-card-hover: #311d1b;
-  --text-primary: #fff3ee;
-  --text-secondary: #f0b8a8;
-  --text-muted: #a9786c;
-  --accent: #ff6b3d;
-  --border: #472724;
-}
-
-/* Neon Mode */
-[data-theme='neon'] {
-  --bg-primary: #040b12;
-  --bg-secondary: #091520;
-  --bg-card: #0d1e2b;
-  --bg-card-hover: #12283a;
-  --text-primary: #eaffff;
-  --text-secondary: #9de6e3;
-  --text-muted: #63b8b4;
-  --accent: #00ffb8;
-  --border: #1b3b52;
 }
 
 * {

@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useCallback, useEffect } fr
 
 export const ThemeContext = createContext();
 
-const THEMES = ['dark', 'light', 'vermilion', 'neon'];
+const THEMES = ['dark', 'light'];
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);
