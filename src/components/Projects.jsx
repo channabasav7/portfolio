@@ -66,17 +66,27 @@ const projects = [
   },
 ];
 
+const listVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.08,
+    },
+  },
+};
+
 const cardVariants = {
-  hidden: { opacity: 0, y: 60 },
-  visible: (i) => ({
+  hidden: { opacity: 0, y: 28, scale: 0.985 },
+  visible: {
     opacity: 1,
     y: 0,
+    scale: 1,
     transition: {
-      delay: i * 0.12,
-      duration: 0.7,
-      ease: [0.4, 0, 0.2, 1],
+      duration: 0.48,
+      ease: [0.22, 1, 0.36, 1],
     },
-  }),
+  },
 };
 
 export default function Projects() {
@@ -153,25 +163,24 @@ export default function Projects() {
           </div>
         </div>
 
-        <div
+        <motion.div
           ref={scrollRef}
           className={styles.grid}
+          variants={listVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerUp={handlePointerUp}
           onPointerCancel={handlePointerUp}
           onPointerLeave={handlePointerUp}
         >
-          {projects.map((project, i) => (
+          {projects.map((project) => (
             <motion.div
               key={project.name}
               className={styles.card}
-              custom={i}
               variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-80px' }}
-              whileHover={{ y: -10 }}
             >
               <div className={styles.thumb} style={{ background: project.color }}>
                 <span
@@ -199,7 +208,7 @@ export default function Projects() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
           className={styles.viewAll}

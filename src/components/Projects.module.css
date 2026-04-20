@@ -124,13 +124,14 @@
   min-width: min(420px, 82vw);
   flex: 0 0 min(420px, 82vw);
   scroll-snap-align: start;
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  transition: transform 220ms ease, border-color 220ms ease;
+  will-change: transform, opacity;
+  contain: layout paint style;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translate3d(0, -6px, 0);
   border-color: var(--accent);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .thumb {
@@ -254,5 +255,15 @@
 
   .section {
     padding: 80px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: border-color 180ms ease;
+  }
+
+  .card:hover {
+    transform: none;
   }
 }
