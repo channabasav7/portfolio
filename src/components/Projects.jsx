@@ -1,5 +1,6 @@
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './Projects.module.css';
 
 const projects = [
@@ -79,6 +80,43 @@ const cardVariants = {
 };
 
 export default function Projects() {
+  const scrollRef = useRef(null);
+  const isDraggingRef = useRef(false);
+  const dragStartXRef = useRef(0);
+  const dragStartScrollRef = useRef(0);
+
+  const scrollCards = (direction) => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollBy({
+      left: direction * 360,
+      behavior: 'smooth',
+    });
+  };
+
+  const handlePointerDown = (event) => {
+    if (!scrollRef.current) return;
+    isDraggingRef.current = true;
+    dragStartXRef.current = event.clientX;
+    dragStartScrollRef.current = scrollRef.current.scrollLeft;
+    scrollRef.current.classList.add(styles.dragging);
+    scrollRef.current.setPointerCapture(event.pointerId);
+  };
+
+  const handlePointerMove = (event) => {
+    if (!scrollRef.current || !isDraggingRef.current) return;
+    const distance = event.clientX - dragStartXRef.current;
+    scrollRef.current.scrollLeft = dragStartScrollRef.current - distance;
+  };
+
+  const handlePointerUp = (event) => {
+    if (!scrollRef.current) return;
+    isDraggingRef.current = false;
+    scrollRef.current.classList.remove(styles.dragging);
+    if (scrollRef.current.hasPointerCapture(event.pointerId)) {
+      scrollRef.current.releasePointerCapture(event.pointerId);
+    }
+  };
+
   return (
     <section className={styles.section} id="projects">
       <div className="container">
@@ -93,7 +131,37 @@ export default function Projects() {
           <h2 className={styles.heading}>Featured projects</h2>
         </motion.div>
 
-        <div className={styles.grid}>
+        <div className={styles.scrollControls}>
+          <span className={styles.scrollHint}>Drag or use arrows</span>
+          <div className={styles.buttonGroup}>
+            <button
+              type="button"
+              className={styles.scrollButton}
+              onClick={() => scrollCards(-1)}
+              aria-label="Scroll projects left"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              type="button"
+              className={styles.scrollButton}
+              onClick={() => scrollCards(1)}
+              aria-label="Scroll projects right"
+            >
+              <ChevronRight size={18} />
+            </button>
+          </div>
+        </div>
+
+        <div
+          ref={scrollRef}
+          className={styles.grid}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerUp}
+          onPointerLeave={handlePointerUp}
+        >
           {projects.map((project, i) => (
             <motion.div
               key={project.name}

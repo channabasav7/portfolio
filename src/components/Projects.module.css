@@ -35,6 +35,49 @@
   line-height: 1.05;
 }
 
+.scrollControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.scrollHint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+}
+
+.scrollButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.scrollButton:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.scrollButton:active {
+  transform: translateY(1px);
+}
+
 .grid {
   display: flex;
   gap: 24px;
@@ -45,6 +88,12 @@
   -webkit-overflow-scrolling: touch;
   padding: 8px 4px 14px;
   margin: 0 -4px;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.dragging {
+  cursor: grabbing;
 }
 
 .grid::-webkit-scrollbar {
@@ -194,6 +243,10 @@
 }
 
 @media (max-width: 640px) {
+  .scrollHint {
+    display: none;
+  }
+
   .card {
     min-width: 86vw;
     flex-basis: 86vw;
