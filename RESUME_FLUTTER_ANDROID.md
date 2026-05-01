@@ -1,48 +1,54 @@
-# CHANNABASAVA S M
+CHANNABASAVA S M
+Email: channabasav40@gmail.com | LinkedIn: linkedin.com/in/channabasava-s-m-66b140299 | GitHub: github.com/channabasav7 | Portfolio: channabasava.vercel.app
 
-Email: channabasav40@gmail.com  
-LinkedIn: https://www.linkedin.com/in/channabasava-s-m-66b140299/  
-GitHub: https://github.com/channabasav7
+PROFESSIONAL SUMMARY
+Flutter and Android Developer with practical experience building cross-platform mobile applications and native Android apps. Proficient in Flutter, Dart, Java, Kotlin, and XML with expertise in user-friendly interfaces, clean architecture patterns, and performance optimization. Seeking internship or entry-level role to contribute to production-ready mobile solutions.
 
-## Professional Summary
-Aspiring Flutter and Android Developer with practical experience building mobile and cross-platform apps using Flutter, Dart, Java, and Kotlin. Strong focus on user-friendly interfaces, clean architecture, and performance-aware implementation. Comfortable with Git/GitHub workflows and eager to contribute to real-world mobile products as an intern or entry-level developer.
+TECHNICAL SKILLS
+Mobile Development: Flutter, Dart, Android, Java, Kotlin, XML, responsive layouts
+Frontend Foundations: React, TypeScript, JavaScript, HTML5, CSS3, Vite
+Programming Languages: Java, Dart, Python, Kotlin
+Tools & Frameworks: Git, GitHub, Android Studio, Flutter SDK, ESLint
+Core Competencies: widget-based architecture, UI/UX implementation, API integration, debugging, code optimization, Git workflows
 
-## Core Skills
-- Mobile Development: Flutter, Dart, Android (Java, Kotlin), XML
-- Frontend Foundations: HTML5, CSS3, JavaScript, React, TypeScript
-- Programming: Python, Java
-- Tooling: Git, GitHub, Vite, ESLint
-- Engineering Strengths: UI implementation, reusable component design, API integration, debugging and iteration
+PROJECTS
+Food App (Flutter, Dart) | 2026
+• Engineered cross-platform food delivery application supporting iOS and Android
+• Designed and implemented clean screen flows with intuitive navigation patterns
+• Developed responsive layouts using Flutter widgets for diverse device sizes
+• Applied clean architecture principles for maintainable and scalable codebase
+• GitHub: github.com/channabasav7/Food
 
-## Projects
-### Food App (Flutter / Dart) | 2026
-- Built a cross-platform food delivery interface with Flutter and Dart.
-- Implemented clean screen flows and user-friendly navigation for ordering experience.
-- Focused on responsive layouts and maintainable widget-based architecture.
-- GitHub: https://github.com/channabasav7/Food
+Nike Store Frontend (HTML5, CSS3, JavaScript) | 2026
+• Built responsive ecommerce user interface with modern frontend practices
+• Implemented interactive UI components and animations for enhanced UX
+• Optimized layout for multi-device compatibility
+• GitHub: github.com/channabasav7/Nike_Store
 
-### System Controller (Python / Automation) | 2026
-- Built an automation tool for desktop control tasks with command-driven operations.
-- Applied structured logic design and reusable modules to improve maintainability.
-- GitHub: https://github.com/channabasav7/system-controller-
+System Controller (Python, Automation) | 2026
+• Developed desktop automation tool with command-driven architecture
+• Implemented structured logic design and reusable modules
+• GitHub: github.com/channabasav7/system-controller
 
-### AI Voice Assistant (AI / Voice Recognition) | 2026
-- Developed a voice-enabled assistant for hands-free user interaction.
-- Implemented core command processing flow for productivity-focused actions.
-- GitHub: https://github.com/channabasav7/AI-voice-Assistant
-
-### Nike Store Frontend (HTML / CSS / JavaScript) | 2026
-- Created a responsive ecommerce-style UI with modern frontend practices.
-- Improved interaction quality with clean layout structure and visual hierarchy.
-- GitHub: https://github.com/channabasav7/Nike_Store
-
-## Education
-Bachelor of Engineering (B.E.), MVJ College of Engineering  
+AI Voice Assistant (Python, Speech Recognition) | 2026
+• Created voice-enabled assistant with command processing capabilities
+• Implemented hands-free interaction features for productivity workflows
+EDUCATION
+Bachelor of Engineering (B.E.), MVJ College of Engineering
 Expected Graduation: 2027
 
-## Internship Objective
-Seeking Flutter/Android internship or entry-level mobile developer role to build production-ready apps, improve code quality practices, and contribute to impactful user experiences.
+CERTIFICATIONS & ACHIEVEMENTS
+• Active GitHub contributor with multiple mobile and web application projects
+• Proficient in cross-platform development using Flutter
+• Strong understanding of Android development principles and native implementation
+• Experienced in Agile workflows and Git-based version control
 
-## Additional Information
+OBJECTIVE
+Seeking Flutter/Android internship or entry-level mobile developer role to build production-ready applications, improve development practices, and contribute to high-quality user experiences in mobile platforms.
+
+ADDITIONAL INFORMATION
+• Open to internships and junior roles in Flutter, Android, and mobile software development
+• Available for relocation to support career growth
+• Portfolio: channabasava.vercel.app
 - Open to internships and junior roles in Flutter, Android, and software development.
 - Portfolio: https://channabasava.vercel.app/
