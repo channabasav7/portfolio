@@ -11,6 +11,7 @@ const projects = [
     color: 'linear-gradient(135deg, #ff6b35 0%, #f7931e 100%)',
     accentColor: '#ffb347',
     year: '2026',
+    repo: 'Food',
     github: 'https://github.com/channabasav7/Food',
     language: 'Dart',
   },
@@ -21,6 +22,7 @@ const projects = [
     color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     accentColor: '#a78bfa',
     year: '2026',
+    repo: 'Hand-gesture',
     github: 'https://github.com/channabasav7/Hand-gesture',
     language: 'Python',
   },
@@ -31,6 +33,7 @@ const projects = [
     color: 'linear-gradient(135deg, #1a1a1a 0%, #434343 100%)',
     accentColor: '#ff4545',
     year: '2026',
+    repo: 'Nike_Store',
     github: 'https://github.com/channabasav7/Nike_Store',
     language: 'HTML',
   },
@@ -41,6 +44,7 @@ const projects = [
     color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     accentColor: '#fbbf24',
     year: '2026',
+    repo: 'sunny-days-ahead',
     github: 'https://github.com/channabasav7/sunny-days-ahead',
     language: 'TypeScript',
   },
@@ -51,6 +55,7 @@ const projects = [
     color: 'linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)',
     accentColor: '#60a5fa',
     year: '2026',
+    repo: 'system-controller-',
     github: 'https://github.com/channabasav7/system-controller-',
     language: 'Python',
   },
@@ -61,6 +66,7 @@ const projects = [
     color: 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)',
     accentColor: '#22d3ee',
     year: '2026',
+    repo: 'AI-voice-Assistant',
     github: 'https://github.com/channabasav7/AI-voice-Assistant',
     language: 'AI',
   },
@@ -201,7 +207,14 @@ export default function Projects() {
                 </div>
                 <h3 className={styles.name}>{project.name}</h3>
                 <p className={styles.desc}>{project.desc}</p>
-                <a href={project.github} className={styles.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.github}
+                  className={styles.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${project.name} on GitHub`}
+                  title={`Open ${project.name} repository (${project.repo})`}
+                >
                   <Github size={16} />
                   View on GitHub
                 </a>

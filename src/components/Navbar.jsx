@@ -46,12 +46,14 @@ export default function Navbar() {
           CS<span className={styles.dot}>.</span>
         </a>
 
-        <div className={styles.links}>
-          {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className={styles.link}>
-              {link.label}
-            </a>
-          ))}
+        <div className={styles.navContainer}>
+          <div className={styles.links}>
+            {navLinks.map((link) => (
+              <a key={link.label} href={link.href} className={styles.link}>
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
 
         <div className={styles.right}>

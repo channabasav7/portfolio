@@ -27,6 +27,13 @@
   gap: 5vw;
 }
 
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
 .links {
   display: flex;
   align-items: center;
@@ -57,6 +64,10 @@
 }
 
 @media (max-width: 768px) {
+  .navContainer {
+    display: none;
+  }
+
   .links {
     display: none;
   }
