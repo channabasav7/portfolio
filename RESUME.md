@@ -8,7 +8,7 @@ TECHNICAL SKILLS
 Languages: JavaScript, TypeScript, Java, Dart, Python, HTML5, CSS3, Kotlin
 Frontend Development: React, Vite, ESLint, responsive design, UI components
 Mobile Development: Flutter, Dart, Android, XML
-Data & Analytics: SQL, Power BI
+Data & Analytics: SQL, Power BI, Pandas
 Tools & Version Control: Git, GitHub, command-line tools
 Core Competencies: component-based architecture, responsive UI development, API integration, debugging, performance optimization, clean code practices
 

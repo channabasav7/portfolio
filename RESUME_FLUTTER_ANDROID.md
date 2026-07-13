@@ -8,7 +8,7 @@ TECHNICAL SKILLS
 Mobile Development: Flutter, Dart, Android, Java, Kotlin, XML, responsive layouts
 Frontend Foundations: React, TypeScript, JavaScript, HTML5, CSS3, Vite
 Programming Languages: Java, Dart, Python, Kotlin
-Data & Analytics: SQL, Power BI
+Data & Analytics: SQL, Power BI, Pandas
 Tools & Frameworks: Git, GitHub, Android Studio, Flutter SDK, ESLint
 Core Competencies: widget-based architecture, UI/UX implementation, API integration, debugging, code optimization, Git workflows
 

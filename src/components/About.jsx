@@ -17,7 +17,7 @@ export default function About() {
                     <div className={styles.content}>
                         <p className={styles.text}>
                             I'm an aspiring front-end and Flutter developer with a strong focus on building functional and user-centric applications.
-                            Currently deepening expertise in Java and mobile app development, with active learning interests in modern frameworks like React, TypeScript, Flutter, and Dart.
+                            Currently deepening expertise in Java, mobile app development, and data analytics with SQL, Power BI, and Pandas, alongside modern frameworks like React, TypeScript, Flutter, and Dart.
                         </p>
                     </div>
                 </motion.div>

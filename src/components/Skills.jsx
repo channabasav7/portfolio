@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, FaGitAlt, FaGithub, FaAndroid } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, FaGitAlt, FaGithub, FaAndroid, FaDatabase, FaChartBar, FaTable } from 'react-icons/fa';
 import { SiTypescript, SiKotlin, SiFlutter, SiDart } from 'react-icons/si';
 import styles from './Skills.module.css';
 
@@ -29,6 +29,14 @@ const skillCategories = [
             { name: 'Python', icon: <FaPython /> },
             { name: 'Git', icon: <FaGitAlt /> },
             { name: 'GitHub', icon: <FaGithub /> },
+        ]
+    },
+    {
+        title: 'Data & Analytics',
+        skills: [
+            { name: 'SQL', icon: <FaDatabase /> },
+            { name: 'Power BI', icon: <FaChartBar /> },
+            { name: 'Pandas', icon: <FaTable /> },
         ]
     }
 ];

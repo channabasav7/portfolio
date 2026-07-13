@@ -5,7 +5,7 @@ import styles from './Resume.module.css';
 const resumeHighlights = [
   'Flutter, Dart, and Android development with practical project experience',
   'React, JavaScript, TypeScript, responsive UI design',
-  'SQL and Power BI for data handling and reporting',
+  'SQL, Power BI, and Pandas for data handling and reporting',
   'Python automation and practical project delivery',
   'Hack-A-League 4.0 2nd Runner-Up with Team HackOps',
   'Git/GitHub workflow and clean component architecture',
