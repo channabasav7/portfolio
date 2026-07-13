@@ -72,14 +72,14 @@ export default function Resume() {
               View Full Resume
             </a>
             <a
-              href="/resume-print.html"
+              href="/Channabasava_SM_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.secondaryBtn}
-              download="Channabasava_SM_Resume_ATS.html"
+              download="Channabasava_SM_Resume.pdf"
             >
               <Download size={16} />
-              Download ATS Resume
+              Download PDF Resume
             </a>
           </div>
         </motion.div>
