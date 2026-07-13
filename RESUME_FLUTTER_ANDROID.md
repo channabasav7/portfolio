@@ -1,5 +1,5 @@
 CHANNABASAVA S M
-Email: channabasav40@gmail.com | LinkedIn: linkedin.com/in/channabasava-s-m-66b140299 | GitHub: github.com/channabasav7 | Portfolio: channabasava.vercel.app
+Email: channabasav40@gmail.com | LinkedIn: [Channabasava . S. M | LinkedIn](https://www.linkedin.com/in/channabasava-s-m-66b140299/) | GitHub: github.com/channabasav7 | Portfolio: channabasava.vercel.app
 
 PROFESSIONAL SUMMARY
 Flutter and Android Developer with practical experience building cross-platform mobile applications and native Android apps. Proficient in Flutter, Dart, Java, Kotlin, and XML with expertise in user-friendly interfaces, clean architecture patterns, and performance optimization. Seeking internship or entry-level role to contribute to production-ready mobile solutions.
@@ -8,6 +8,7 @@ TECHNICAL SKILLS
 Mobile Development: Flutter, Dart, Android, Java, Kotlin, XML, responsive layouts
 Frontend Foundations: React, TypeScript, JavaScript, HTML5, CSS3, Vite
 Programming Languages: Java, Dart, Python, Kotlin
+Data & Analytics: SQL, Power BI
 Tools & Frameworks: Git, GitHub, Android Studio, Flutter SDK, ESLint
 Core Competencies: widget-based architecture, UI/UX implementation, API integration, debugging, code optimization, Git workflows
 
@@ -38,6 +39,8 @@ Bachelor of Engineering (B.E.), MVJ College of Engineering
 Expected Graduation: 2027
 
 CERTIFICATIONS & ACHIEVEMENTS
+• Hack-A-League 4.0: 2nd Runner-Up (3rd Prize) with Team HackOps for Sentinel, a zero-exposure threat detection system for military communications
+• Hackathon project used Searchable Symmetric Encryption (SSE), Bloom Filters, AES-256 Encryption, and WebSockets
 • Active GitHub contributor with multiple mobile and web application projects
 • Proficient in cross-platform development using Flutter
 • Strong understanding of Android development principles and native implementation

@@ -1,5 +1,5 @@
 CHANNABASAVA S M
-Email: channabasav40@gmail.com | LinkedIn: linkedin.com/in/channabasava-s-m-66b140299 | GitHub: github.com/channabasav7 | Portfolio: channabasava.vercel.app
+Email: channabasav40@gmail.com | LinkedIn: [Channabasava . S. M | LinkedIn](https://www.linkedin.com/in/channabasava-s-m-66b140299/) | GitHub: github.com/channabasav7 | Portfolio: channabasava.vercel.app
 
 PROFESSIONAL SUMMARY
 Frontend and Flutter Developer with hands-on experience building responsive web and mobile applications. Proficient in React, TypeScript, JavaScript, Flutter, and Dart with strong foundation in UI/UX implementation, component-based architecture, and API integration. Demonstrated ability to develop production-ready applications with clean code and modern development practices.
@@ -8,6 +8,7 @@ TECHNICAL SKILLS
 Languages: JavaScript, TypeScript, Java, Dart, Python, HTML5, CSS3, Kotlin
 Frontend Development: React, Vite, ESLint, responsive design, UI components
 Mobile Development: Flutter, Dart, Android, XML
+Data & Analytics: SQL, Power BI
 Tools & Version Control: Git, GitHub, command-line tools
 Core Competencies: component-based architecture, responsive UI development, API integration, debugging, performance optimization, clean code practices
 
@@ -47,6 +48,8 @@ Bachelor of Engineering (B.E.), MVJ College of Engineering
 Expected Graduation: 2027
 
 CERTIFICATIONS & ACHIEVEMENTS
+• Hack-A-League 4.0: 2nd Runner-Up (3rd Prize) with Team HackOps for Sentinel, a zero-exposure threat detection system for military communications
+• Hackathon project used Searchable Symmetric Encryption (SSE), Bloom Filters, AES-256 Encryption, and WebSockets
 • Active contributor and creator of multiple GitHub repositories with 6+ portfolio projects
 • Strong foundation in modern web technologies and mobile development frameworks
 • Experienced in Agile development practices and version control workflows
