@@ -138,6 +138,10 @@ This project is open source and available for personal and professional use.
 
 Feel free to fork this repository and submit pull requests for improvements.
 
+## 📬 Contact
+
+For resume or portfolio-related updates, reach out at channabasav40@gmail.com or +91 9483992653.
+
 ---
 
 **Made with ❤️ by Channabasav**

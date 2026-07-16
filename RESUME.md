@@ -1,5 +1,5 @@
 CHANNABASAVA S M
-Email: channabasav40@gmail.com | linkedin.com/in/channabasava-s-m-66b140299 | github.com/channabasav7 | channabasava.vercel.app
+Email: channabasav40@gmail.com | Phone: +91 9483992653 | linkedin.com/in/channabasava-s-m-66b140299 | github.com/channabasav7 | channabasava.vercel.app
 
 PROFESSIONAL SUMMARY
 Flutter and Android Developer skilled in Dart, Kotlin, Java, Firebase, and REST API integration, with hands-on experience building cross-platform mobile applications including a food delivery app, a voice-assistant, and e-commerce UI projects. Strong focus on clean, widget-based architecture, reusable UI components, and reliable application flows. Open to internship and entry-level Flutter/Android Developer opportunities.
