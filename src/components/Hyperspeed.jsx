@@ -1,6 +1,53 @@
 import { useEffect, useRef } from 'react';
 import './Hyperspeed.css';
 
+class Particle {
+  constructor(canvasWidth, canvasHeight, speed, speedBoost) {
+    this.reset(canvasWidth, canvasHeight, speed, speedBoost);
+  }
+
+  reset(canvasWidth, canvasHeight, speed, speedBoost) {
+    this.x = Math.random() * canvasWidth;
+    this.y = Math.random() * canvasHeight;
+    this.z = Math.random() * 1000;
+    this.vx = (Math.random() - 0.5) * speed * 2;
+    this.vy = (Math.random() - 0.5) * speed * 2;
+    this.vz = speed * 10 * speedBoost;
+    this.size = Math.random() * 2 + 1;
+  }
+
+  update(canvasWidth, canvasHeight, speed, speedBoost) {
+    this.x += this.vx;
+    this.y += this.vy;
+    this.z -= this.vz;
+
+    // Wrap around
+    if (this.x < 0) this.x = canvasWidth;
+    if (this.x > canvasWidth) this.x = 0;
+    if (this.y < 0) this.y = canvasHeight;
+    if (this.y > canvasHeight) this.y = 0;
+    if (this.z < 1) {
+      this.z = 1000;
+      this.x = Math.random() * canvasWidth;
+      this.y = Math.random() * canvasHeight;
+      this.vx = (Math.random() - 0.5) * speed * 2;
+      this.vy = (Math.random() - 0.5) * speed * 2;
+      this.vz = speed * 10 * speedBoost;
+    }
+  }
+
+  draw(ctx, canvasWidth, canvasHeight, particleColor) {
+    const scale = 1000 / this.z;
+    const x2d = (this.x - canvasWidth / 2) * scale + canvasWidth / 2;
+    const y2d = (this.y - canvasHeight / 2) * scale + canvasHeight / 2;
+    const size = this.size * scale;
+
+    ctx.fillStyle = particleColor;
+    ctx.globalAlpha = Math.max(0, 1 - this.z / 1000);
+    ctx.fillRect(x2d, y2d, size, size);
+  }
+}
+
 export default function Hyperspeed({ effectOptions = {} }) {
   const canvasRef = useRef(null);
 
@@ -17,7 +64,6 @@ export default function Hyperspeed({ effectOptions = {} }) {
       speed = 0.5,
       vignette = true,
       blurTrail = true,
-      dashSize = 4,
     } = effectOptions;
 
     // Set canvas size
@@ -30,49 +76,9 @@ export default function Hyperspeed({ effectOptions = {} }) {
     // Particle system
     const particles = [];
 
-    class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.z = Math.random() * 1000;
-        this.vx = (Math.random() - 0.5) * speed * 2;
-        this.vy = (Math.random() - 0.5) * speed * 2;
-        this.vz = speed * 10 * speedBoost;
-        this.size = Math.random() * 2 + 1;
-      }
-
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.z -= this.vz;
-
-        // Wrap around
-        if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
-        if (this.z < 1) {
-          this.z = 1000;
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;
-        }
-      }
-
-      draw() {
-        const scale = 1000 / this.z;
-        const x2d = (this.x - canvas.width / 2) * scale + canvas.width / 2;
-        const y2d = (this.y - canvas.height / 2) * scale + canvas.height / 2;
-        const size = this.size * scale;
-
-        ctx.fillStyle = particleColor;
-        ctx.globalAlpha = 1 - this.z / 1000;
-        ctx.fillRect(x2d, y2d, size, size);
-      }
-    }
-
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
+      particles.push(new Particle(canvas.width, canvas.height, speed, speedBoost));
     }
 
     let animationId;
@@ -91,8 +97,8 @@ export default function Hyperspeed({ effectOptions = {} }) {
 
       // Update and draw particles
       particles.forEach((particle) => {
-        particle.update();
-        particle.draw();
+        particle.update(canvas.width, canvas.height, speed, speedBoost);
+        particle.draw(ctx, canvas.width, canvas.height, particleColor);
       });
 
       // Draw lines between particles

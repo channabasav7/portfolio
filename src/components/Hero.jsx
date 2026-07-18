@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin } from 'lucide-react';
 import styles from './Hero.module.css';
-import { useTheme } from '../contexts/ThemeContext';
 
 const letterVariants = {
   hidden: { y: 100, opacity: 0 },
