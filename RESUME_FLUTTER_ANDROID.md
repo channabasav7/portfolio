@@ -2,33 +2,33 @@ CHANNABASAVA S M
 Email: channabasav40@gmail.com | Phone: +91 9483992653 | linkedin.com/in/channabasava-s-m-66b140299 | github.com/channabasav7 | channabasava.vercel.app
 
 PROFESSIONAL SUMMARY
-Flutter and Android Developer skilled in Dart, Kotlin, Java, Firebase, and REST API integration, with hands-on experience building cross-platform mobile applications including a food delivery app, a voice-assistant, and e-commerce UI projects. Strong focus on clean, widget-based architecture, reusable UI components, and reliable application flows. Open to internship and entry-level Flutter/Android Developer opportunities.
+Frontend, Flutter, and Android Developer skilled in Dart, Kotlin, JavaScript, TypeScript, Firebase, REST API integration, and clean UI architecture, with hands-on experience building mobile and web applications for food recipes, AI voice interaction, and hostel meal management. Strong focus on responsive interfaces, reusable components, and practical project delivery for internship and entry-level roles.
 
 SKILLS
 Mobile Development: Flutter, Dart, Android, Kotlin, Java
-Backend & Integration: Firebase (Auth, Firestore), REST API Integration
-Frontend: HTML5, CSS3, JavaScript
-Programming Languages: Python, Java, Kotlin, Dart, SQL, Pandas
-Tools & Platforms: Git, GitHub, Android Studio, VS Code, Power BI
+Frontend: React, TypeScript, HTML5, CSS3, JavaScript
+Backend & Integration: Node.js, Express, Firebase (Auth, Firestore), PostgreSQL, REST API Integration
+Programming Languages: Python, Java, Kotlin, Dart, SQL
+Tools & Platforms: Git, GitHub, Android Studio, VS Code
 
 PROJECTS
-Food Delivery App | Flutter, Dart | 2026
-• Built a cross-platform food delivery application using a clean, widget-based, reusable UI architecture
-• Designed responsive mobile screens covering browsing, ordering, and navigation flows
-• Focused on maintainable code structure and an intuitive ordering journey
-• GitHub: github.com/channabasav7/Food
+Smart Hostel Food Management | React, TypeScript, Node.js, Express, PostgreSQL, AI, QR Verification | 2026
+• Built a full-stack hostel meal management platform with student and admin dashboards, meal booking, and history tracking
+• Implemented QR-based meal verification, feedback analytics, AI menu planning, and report exports
+• Added authentication, role-based access, and operational dashboards for campus food management
+• GitHub: github.com/channabasav7/Smart-Hostel-Food-Management
 
-AI Voice Assistant | Python | 2026
-• Developed a voice-enabled assistant for command-driven interaction and task automation
-• Implemented core voice command processing and action-handling pipeline
-• Improved interaction accessibility through hands-free control design
+Food Recipes App | Flutter, Dart, Riverpod | 2026
+• Built a Flutter recipe app with categorized browsing, favorites, and detailed meal screens
+• Used Riverpod state management and reusable widgets for clean navigation and maintainable UI
+• Designed responsive recipe cards and ingredient views for a polished mobile experience
+• GitHub: github.com/channabasav7/Food-Recepies
+
+AI Voice Assistant | JavaScript, HTML, CSS, Node.js, Web Speech API, n8n | 2026
+• Developed a voice-enabled AI chat interface with text chat, speech recognition, and file upload support
+• Integrated a Node.js proxy server with n8n webhooks to route commands and responses reliably
+• Built a responsive interface with animation, notifications, and accessible controls
 • GitHub: github.com/channabasav7/AI-voice-Assistant
-
-Nike Store Frontend | HTML, CSS, JavaScript | 2026
-• Built a responsive e-commerce-style frontend with interactive, well-structured layouts
-• Designed clear visual hierarchy and mobile-responsive UI patterns
-• Implemented user-friendly browsing interactions for smoother product discovery
-• GitHub: github.com/channabasav7/Nike_Store
 
 EXPERIENCE & ACHIEVEMENTS
 • Hack-A-League 4.0: 2nd Runner-Up (3rd Prize) with Team HackOps for Sentinel, a zero-exposure threat detection system for military communications

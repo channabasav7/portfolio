@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Channabasava S M - Resume</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
+
     :root {
       --ink: #14181f;
       --muted: #4a5568;
@@ -19,7 +21,7 @@
 
     body {
       margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Manrope', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: var(--ink);
       background: #f4f7fb;
       line-height: 1.35;
@@ -54,6 +56,7 @@
 
     h1 {
       margin: 0;
+      font-family: 'Sora', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 22pt;
       letter-spacing: 0.4px;
       line-height: 1.1;
@@ -96,6 +99,7 @@
 
     h2 {
       margin: 0 0 6px;
+      font-family: 'Sora', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 10.2pt;
       text-transform: uppercase;
       letter-spacing: 0.8px;
@@ -211,7 +215,7 @@
     <section>
       <h2>Professional Summary</h2>
       <p>
-        Flutter and Android Developer skilled in Dart, Kotlin, Java, Firebase, and REST API integration, with hands-on experience building cross-platform mobile applications including a food delivery app, a voice-assistant, and e-commerce UI projects. Strong focus on clean, widget-based architecture, reusable UI components, and reliable application flows. Open to internship and entry-level Flutter/Android Developer opportunities.
+        Frontend, Flutter, and Android Developer skilled in Dart, Kotlin, JavaScript, TypeScript, Firebase, REST API integration, and clean UI architecture, with hands-on experience building mobile and web applications for food recipes, AI voice interaction, and hostel meal management. Strong focus on responsive interfaces, reusable components, and practical project delivery for internship and entry-level roles.
       </p>
     </section>
 
@@ -219,10 +223,10 @@
       <h2>Skills</h2>
       <div class="skills">
         <div><strong>Mobile Development:</strong> Flutter, Dart, Android, Kotlin, Java</div>
-        <div><strong>Backend & Integration:</strong> Firebase (Auth, Firestore), REST API Integration</div>
-        <div><strong>Frontend:</strong> HTML5, CSS3, JavaScript</div>
-        <div><strong>Programming Languages:</strong> Python, Java, Kotlin, Dart, SQL, Pandas</div>
-        <div><strong>Tools & Platforms:</strong> Git, GitHub, Android Studio, VS Code, Power BI</div>
+        <div><strong>Frontend:</strong> React, TypeScript, HTML5, CSS3, JavaScript</div>
+        <div><strong>Backend & Integration:</strong> Node.js, Express, Firebase (Auth, Firestore), PostgreSQL, REST API Integration</div>
+        <div><strong>Programming Languages:</strong> Python, Java, Kotlin, Dart, SQL</div>
+        <div><strong>Tools & Platforms:</strong> Git, GitHub, Android Studio, VS Code</div>
       </div>
     </section>
 
@@ -231,46 +235,49 @@
 
       <article class="project">
         <div class="project-head">
-          <span>Food Delivery App | Flutter, Dart</span>
+          <span>Smart Hostel Food Management | React, TypeScript, Node.js, Express, PostgreSQL, AI, QR Verification</span>
           <span>2026</span>
         </div>
-        <p class="project-meta">Cross-platform food delivery application with a clean, widget-based, reusable UI architecture.</p>
+        <p class="project-meta">Full-stack hostel meal management platform with student and admin dashboards, booking, and history tracking.</p>
         <ul>
-          <li>Built responsive mobile screens covering browsing, ordering, and navigation flows.</li>
-          <li>Focused on maintainable code structure and an intuitive ordering journey.</li>
+          <li>Built a full-stack hostel meal management platform with student and admin dashboards, meal booking, and history tracking.</li>
+          <li>Implemented QR-based meal verification, feedback analytics, AI menu planning, and report exports.</li>
+          <li>Added authentication, role-based access, and operational dashboards for campus food management.</li>
         </ul>
-        <a href="https://github.com/channabasav7/Food">github.com/channabasav7/Food</a>
+        <a href="https://github.com/channabasav7/Smart-Hostel-Food-Management">github.com/channabasav7/Smart-Hostel-Food-Management</a>
       </article>
 
       <article class="project">
         <div class="project-head">
-          <span>AI Voice Assistant | Python</span>
+          <span>Food Recipes App | Flutter, Dart, Riverpod</span>
           <span>2026</span>
         </div>
-        <p class="project-meta">Voice-enabled assistant for command-driven interaction and task automation.</p>
+        <p class="project-meta">Flutter recipe app with categorized browsing, favorites, and detailed meal screens.</p>
         <ul>
-          <li>Developed a voice-enabled assistant for command-driven interaction and task automation.</li>
-          <li>Implemented core voice command processing and action-handling pipeline.</li>
+          <li>Built a Flutter recipe app with categorized browsing, favorites, and detailed meal screens.</li>
+          <li>Used Riverpod state management and reusable widgets for clean navigation and maintainable UI.</li>
+          <li>Designed responsive recipe cards and ingredient views for a polished mobile experience.</li>
+        </ul>
+        <a href="https://github.com/channabasav7/Food-Recepies">github.com/channabasav7/Food-Recepies</a>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <span>AI Voice Assistant | JavaScript, HTML, CSS, Node.js, Web Speech API, n8n</span>
+          <span>2026</span>
+        </div>
+        <p class="project-meta">Voice-enabled AI chat interface with text chat, speech recognition, and file upload support.</p>
+        <ul>
+          <li>Developed a voice-enabled AI chat interface with text chat, speech recognition, and file upload support.</li>
+          <li>Integrated a Node.js proxy server with n8n webhooks to route commands and responses reliably.</li>
+          <li>Built a responsive interface with animation, notifications, and accessible controls.</li>
         </ul>
         <a href="https://github.com/channabasav7/AI-voice-Assistant">github.com/channabasav7/AI-voice-Assistant</a>
-      </article>
-
-      <article class="project">
-        <div class="project-head">
-          <span>Nike Store Frontend | HTML, CSS, JavaScript</span>
-          <span>2026</span>
-        </div>
-        <p class="project-meta">Responsive e-commerce-style frontend with interactive, well-structured layouts.</p>
-        <ul>
-          <li>Designed clear visual hierarchy and mobile-responsive UI patterns.</li>
-          <li>Implemented user-friendly browsing interactions for smoother product discovery.</li>
-        </ul>
-        <a href="https://github.com/channabasav7/Nike_Store">github.com/channabasav7/Nike_Store</a>
       </article>
     </section>
 
     <section>
-      <h2>Certifications & Achievements</h2>
+      <h2>Experience & Achievements</h2>
       <ul>
         <li>Hack-A-League 4.0: 2nd Runner-Up (3rd Prize) with Team HackOps for Sentinel, a zero-exposure threat detection system for military communications.</li>
         <li>Applied Searchable Symmetric Encryption (SSE), Bloom Filters, AES-256 Encryption, and WebSockets in the project.</li>
@@ -283,7 +290,7 @@
         <span>B.E., Computer Science — MVJ College of Engineering, Bengaluru</span>
         <span>Expected 2027</span>
       </div>
-      <p class="subtle">Relevant coursework: Cloud Computing, Enterprise Java, Microservices, Blockchain, Containerization Technologies.</p>
+      <p class="subtle">Relevant coursework: Cloud Computing, Enterprise Java, Microservices, Blockchain, Containerization Technologies</p>
     </section>
   </main>
 </body>
