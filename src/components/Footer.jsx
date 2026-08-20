@@ -6,7 +6,7 @@ const socials = [
   { name: 'GitHub', href: '#', icon: '⌨' },
 ];
 
-export default function Footer() {
+export default function Footer({ onOpenAdmin }) {
   return (
     <footer className={styles.footer} id="contact">
       <div className={`container ${styles.inner}`}>
@@ -53,7 +53,7 @@ export default function Footer() {
           <a href="#" className={styles.logo}>
             CS<span className={styles.dot}>.</span>
           </a>
-          <p className={styles.copy}>
+          <p className={styles.copy} style={{ cursor: 'pointer' }} title="Admin Analytics" onClick={onOpenAdmin}>
             &copy; {new Date().getFullYear()} Channabasava. All rights reserved.
           </p>
           <div className={styles.links}>

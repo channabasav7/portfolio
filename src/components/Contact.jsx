@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Contact.module.css';
+import { identifyVisitor } from '../services/analyticsService';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -20,6 +21,11 @@ export default function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('sending');
+
+        // Automatically link visitor name and email to their tracking session ID
+        if (formData.name) {
+            identifyVisitor(formData.name, formData.email);
+        }
 
         try {
             const response = await fetch('https://api.web3forms.com/submit', {
