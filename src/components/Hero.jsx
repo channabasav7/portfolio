@@ -19,7 +19,7 @@ export default function Hero() {
   const name = 'CHANNABASAVA';
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="home">
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
           <motion.p
