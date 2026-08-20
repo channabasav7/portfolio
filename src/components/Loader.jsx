@@ -55,7 +55,7 @@ export default function Loader({ onComplete }) {
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
             className={styles.title}
           >
-            Channabasava S. M
+            Channabasava
           </motion.h1>
         </div>
         <div className={styles.rightHeader}>
