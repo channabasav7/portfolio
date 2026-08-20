@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -8,12 +9,16 @@ import Skills from './components/Skills';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Loader from './components/Loader';
 import ParticleCanvas from './components/ParticleCanvas';
 import useVisitorTracker from './hooks/useVisitorTracker';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 
 export default function App() {
   const [isAdminOpen, setIsAdminOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(() => {
+    return !sessionStorage.getItem('portfolioSessionLoaded');
+  });
 
   // Initialize silent background visitor tracking
   useVisitorTracker();
@@ -46,6 +51,17 @@ export default function App() {
 
   return (
     <>
+      <AnimatePresence mode="wait">
+        {isLoading && (
+          <Loader
+            onComplete={() => {
+              sessionStorage.setItem('portfolioSessionLoaded', 'true');
+              setIsLoading(false);
+            }}
+          />
+        )}
+      </AnimatePresence>
+
       <ParticleCanvas />
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Navbar />
