@@ -17,7 +17,10 @@ import {
   X,
   Layers,
   Search,
-  Settings
+  Settings,
+  UserCheck,
+  Edit2,
+  User
 } from 'lucide-react';
 import {
   verifyAdminPin,
@@ -25,7 +28,8 @@ import {
   getProcessedAnalytics,
   clearAnalyticsLogs,
   formatDuration,
-  exportAnalyticsJSON
+  exportAnalyticsJSON,
+  setVisitorCustomTag
 } from '../../services/analyticsService';
 import styles from './AdminDashboard.module.css';
 
@@ -41,6 +45,10 @@ export default function AdminDashboard({ isOpen, onClose }) {
 
   const [newPin, setNewPin] = useState('');
   const [pinSuccess, setPinSuccess] = useState('');
+
+  // Editing Visitor Name/Tag Modal
+  const [editingVisitor, setEditingVisitor] = useState(null);
+  const [customTagInput, setCustomTagInput] = useState('');
 
   useEffect(() => {
     if (isOpen) {
@@ -99,11 +107,24 @@ export default function AdminDashboard({ isOpen, onClose }) {
     }
   };
 
+  const handleSaveVisitorTag = (e) => {
+    e.preventDefault();
+    if (editingVisitor) {
+      setVisitorCustomTag(editingVisitor.visitorId, customTagInput);
+      setEditingVisitor(null);
+      setCustomTagInput('');
+      loadMetrics();
+    }
+  };
+
   if (!isOpen) return null;
 
   const filteredLogs = analytics?.logs.filter((log) => {
     const term = searchTerm.toLowerCase();
     return (
+      (log.visitorName || '').toLowerCase().includes(term) ||
+      (log.customTag || '').toLowerCase().includes(term) ||
+      (log.visitorEmail || '').toLowerCase().includes(term) ||
       log.id.toLowerCase().includes(term) ||
       log.visitorId.toLowerCase().includes(term) ||
       (log.location?.country || '').toLowerCase().includes(term) ||
@@ -376,18 +397,18 @@ export default function AdminDashboard({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* Detailed Log Table */}
+            {/* Detailed Log Table with Visitor Names */}
             <div className={styles.cardPanel}>
               <div className={styles.panelTitle}>
                 <div>
-                  <span className={styles.labelPrefix}>// ACTIVITY HISTORY</span>
-                  Visitor Log ({filteredLogs.length})
+                  <span className={styles.labelPrefix}>// VISITOR IDENTITIES & LOGS</span>
+                  Visitor Activity Log ({filteredLogs.length})
                 </div>
 
-                <div className={styles.inputGroup} style={{ width: '220px' }}>
+                <div className={styles.inputGroup} style={{ width: '240px' }}>
                   <input
                     type="text"
-                    placeholder="Search logs..."
+                    placeholder="Search name, country..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className={styles.pinInput}
@@ -401,6 +422,7 @@ export default function AdminDashboard({ isOpen, onClose }) {
                 <table className={styles.logsTable}>
                   <thead>
                     <tr>
+                      <th>Visitor Identity</th>
                       <th>Time & Date</th>
                       <th>Location</th>
                       <th>Device & Browser</th>
@@ -411,36 +433,67 @@ export default function AdminDashboard({ isOpen, onClose }) {
                   </thead>
                   <tbody>
                     {filteredLogs.length > 0 ? (
-                      filteredLogs.map((log) => (
-                        <tr key={log.id}>
-                          <td>
-                            <div style={{ fontWeight: '600' }}>{log.time}</div>
-                            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{log.date}</div>
-                          </td>
-                          <td>
-                            <div>{log.location?.country || 'Unknown'}</div>
-                            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{log.location?.city || ''}</div>
-                          </td>
-                          <td>
-                            <div>{log.device} • {log.os}</div>
-                            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{log.browser}</div>
-                          </td>
-                          <td>{log.referrer}</td>
-                          <td>
-                            {(log.sectionsVisited || ['hero']).map((s) => (
-                              <span key={s} className={styles.tag}>
-                                {s}
-                              </span>
-                            ))}
-                          </td>
-                          <td style={{ fontWeight: '700', color: 'var(--accent)', fontFamily: 'var(--font-mono)' }}>
-                            {formatDuration(log.duration)}
-                          </td>
-                        </tr>
-                      ))
+                      filteredLogs.map((log) => {
+                        const displayName = log.visitorName || log.customTag || null;
+                        return (
+                          <tr key={log.id}>
+                            <td>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                {displayName ? (
+                                  <UserCheck size={16} style={{ color: 'var(--accent)', flexShrink: 0 }} />
+                                ) : (
+                                  <User size={16} style={{ color: 'var(--text-muted)', flexShrink: 0 }} />
+                                )}
+                                <div>
+                                  <div style={{ fontWeight: displayName ? '700' : '500', color: displayName ? 'var(--text-primary)' : 'var(--text-secondary)' }}>
+                                    {displayName || `Visitor #${log.visitorId.slice(0, 10)}`}
+                                  </div>
+                                  {log.visitorEmail && (
+                                    <div style={{ fontSize: '0.75rem', color: 'var(--accent)' }}>{log.visitorEmail}</div>
+                                  )}
+                                </div>
+                                <button
+                                  className={styles.iconBtn}
+                                  style={{ padding: '0.2rem 0.4rem', borderRadius: '4px', fontSize: '0.7rem', marginLeft: 'auto' }}
+                                  title="Add Name / Tag to Visitor"
+                                  onClick={() => {
+                                    setEditingVisitor(log);
+                                    setCustomTagInput(log.visitorName || log.customTag || '');
+                                  }}
+                                >
+                                  <Edit2 size={12} />
+                                </button>
+                              </div>
+                            </td>
+                            <td>
+                              <div style={{ fontWeight: '600' }}>{log.time}</div>
+                              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{log.date}</div>
+                            </td>
+                            <td>
+                              <div>{log.location?.country || 'Unknown'}</div>
+                              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{log.location?.city || ''}</div>
+                            </td>
+                            <td>
+                              <div>{log.device} • {log.os}</div>
+                              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{log.browser}</div>
+                            </td>
+                            <td>{log.referrer}</td>
+                            <td>
+                              {(log.sectionsVisited || ['hero']).map((s) => (
+                                <span key={s} className={styles.tag}>
+                                  {s}
+                                </span>
+                              ))}
+                            </td>
+                            <td style={{ fontWeight: '700', color: 'var(--accent)', fontFamily: 'var(--font-mono)' }}>
+                              {formatDuration(log.duration)}
+                            </td>
+                          </tr>
+                        );
+                      })
                     ) : (
                       <tr>
-                        <td colSpan="6" style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-muted)' }}>
+                        <td colSpan="7" style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-muted)' }}>
                           No visitor logs match your search criteria.
                         </td>
                       </tr>
@@ -450,6 +503,43 @@ export default function AdminDashboard({ isOpen, onClose }) {
               </div>
             </div>
           </div>
+
+          {/* Edit Visitor Tag/Name Modal */}
+          {editingVisitor && (
+            <div className={styles.settingsModal}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                <h3 style={{ margin: 0, color: 'var(--text-primary)', fontFamily: 'var(--font-display)' }}>
+                  Name Visitor #{editingVisitor.visitorId.slice(0, 8)}
+                </h3>
+                <button className={styles.closeBtn} onClick={() => setEditingVisitor(null)} style={{ position: 'static' }}>
+                  <X size={18} />
+                </button>
+              </div>
+
+              <form onSubmit={handleSaveVisitorTag}>
+                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
+                  Set Name or Note for this Visitor ID
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. Alex (Google Recruiter)"
+                  value={customTagInput}
+                  onChange={(e) => setCustomTagInput(e.target.value)}
+                  className={styles.pinInput}
+                  style={{ fontSize: '0.95rem', marginBottom: '1rem', letterSpacing: 'normal', fontFamily: 'var(--font-body)' }}
+                  autoFocus
+                />
+                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem' }}>
+                  <button type="button" className={styles.iconBtn} onClick={() => setEditingVisitor(null)}>
+                    Cancel
+                  </button>
+                  <button type="submit" className={styles.authSubmitBtn} style={{ padding: '0.5rem 1.25rem' }}>
+                    Save Name
+                  </button>
+                </div>
+              </form>
+            </div>
+          )}
 
           {/* Settings Modal */}
           {showSettings && (

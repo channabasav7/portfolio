@@ -421,49 +421,6 @@ export function exportAnalyticsJSON() {
   downloadAnchor.remove();
 }
 
-/**
- * Seed realistic mock data if history is empty
- */
 export function ensureInitialData() {
-  const existing = getRawLogs();
-  if (existing.length === 0) {
-    const mockLogs = [];
-    const devices = ['Desktop', 'Mobile', 'Desktop', 'Tablet', 'Desktop'];
-    const browsers = ['Chrome', 'Safari', 'Firefox', 'Edge'];
-    const countries = ['United States', 'India', 'United Kingdom', 'Germany', 'Canada'];
-    const referrers = ['Direct / None', 'linkedin.com', 'github.com', 'google.com'];
-    const sampleNames = ['Alex Johnson', 'Priya Sharma', '', 'David Miller', ''];
-
-    for (let i = 0; i < 15; i++) {
-      const pastDate = new Date();
-      pastDate.setDate(pastDate.getDate() - Math.floor(i / 2));
-      const dateStr = pastDate.toISOString().split('T')[0];
-      const vid = generateUuid();
-      const sName = sampleNames[i % sampleNames.length];
-
-      mockLogs.push({
-        id: generateUuid(),
-        visitorId: vid,
-        visitorName: sName,
-        visitorEmail: sName ? `${sName.toLowerCase().replace(' ', '.')}@example.com` : '',
-        startTime: pastDate.toISOString(),
-        date: dateStr,
-        time: pastDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        lastActive: pastDate.toISOString(),
-        duration: Math.floor(Math.random() * 180) + 15,
-        device: devices[i % devices.length],
-        os: devices[i % devices.length] === 'Mobile' ? 'iOS' : 'Windows',
-        browser: browsers[i % browsers.length],
-        referrer: referrers[i % referrers.length],
-        location: {
-          city: 'Sample City',
-          country: countries[i % countries.length],
-          countryCode: 'US'
-        },
-        sectionsVisited: ['hero', 'about', 'projects'].slice(0, Math.floor(Math.random() * 3) + 1),
-        screenSize: '1920x1080'
-      });
-    }
-    saveRawLogs(mockLogs);
-  }
+  // Mock data disabled - only real visitor data is tracked
 }

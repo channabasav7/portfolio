@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { trackSessionStart, trackSessionHeartbeat, ensureInitialData } from '../services/analyticsService';
+import { trackSessionStart, trackSessionHeartbeat } from '../services/analyticsService';
 
 /**
  * Custom hook for silent background visitor tracking
@@ -9,10 +9,7 @@ export function useVisitorTracker() {
   const timerRef = useRef(null);
 
   useEffect(() => {
-    // Ensure initial demo logs if completely empty for seamless dashboard testing
-    ensureInitialData();
-
-    // Start visitor tracking session
+    // Start real visitor tracking session
     trackSessionStart();
 
     // Section visibility observer
